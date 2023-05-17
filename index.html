@@ -546,7 +546,7 @@
             background-color: black;
             width: 100%;
             height: 800px;
-            background-image: url("Images/4k-forest-with-dirt-pathway-sssu9mpkfvsfewvs.jpg");
+            background-image: url("Images/zac-ong-_q4-ykeXOPE-unsplash.jpg");
             background-repeat: no-repeat;
             background-position: 0;
             background-size: cover;
@@ -824,9 +824,8 @@
                 </div>
                 <div class="top-nav-right">
                     <a href="https://www.facebook.com/Luka.Tskhvaradze?mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-square-facebook right-i"></i></a>
-                    <a href="#"><i class="fa-brands fa-twitter right-i"></i></a>
-                    <a href="#"><i class="fa-brands fa-vk right-i"></i></a>
-                    <a href="#"><i class="fa-brands fa-square-instagram right-i"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=995555277335" target="_blank"><i class="fa-brands fa-whatsapp right-i"></i></a>
+                    <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Flulinitransport%3Figshid%3DMzRlODBiNWFlZA%253D%253D%26fbclid%3DIwAR0rnaL-4t7TkIVUZfLleJ67dYzzSp-wA6A-niXczm7RrOnKiejSKvG7pQ0&h=AT1HYp7jP2QihzdosNkyfXa1C7_yghZLMmNI5Had7b_DH7euySuWkDcF2yqs9mB6PCAa0jCV7c9fqWmltgGxsWV21_YNNClv5eSQMetkd6AebSQiH-6fsFoXiH-6qyOZA-GOxw" target="_blank"><i class="fa-brands fa-square-instagram right-i"></i></a>
                 </div>
             </div>
             <div id="hk"></div>
@@ -985,5 +984,38 @@
             </div>
         </div>
     </main>
+    <footer>
+        <!-- Messenger საუბრის დანამატი Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your საუბრის დანამატი code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "104097289269170");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v16.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    
+    </footer>
 </body>
 </html>
