@@ -692,7 +692,7 @@
         }
         .contact{
             width: 100%;
-            height: 750px;
+            height: 800px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -700,8 +700,8 @@
             gap: 50px;
         }
         .map{
-            width: 600px;
-            height: 650px;
+            width: 650px;
+            height: 700px;
         }
         .map iframe{
             width: 100%;
@@ -711,8 +711,8 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
-            width: 600px;
-            height: 650px;
+            width: 650px;
+            height: 700px;
             overflow: hidden;
             text-align: center;
         }
@@ -747,7 +747,7 @@
         .wera hr{
             border: #d1d1d1 1px solid;
         }
-        .wera form input{
+        .wera form input,#sel{
             padding: 20px;
             border: none;
             background-color: #8ECE41;
@@ -755,7 +755,7 @@
             font-size: 18px;
             transition: 0.25s;
         }
-        .wera form input:focus{
+        .wera form input:focus , #sel:focus{
             background-color: #679d25;
             outline: none;
         }
@@ -797,23 +797,23 @@
         }
         @media screen and (max-width:1265px){
             .contact{
-                height: 650px;
+                height: 700px;
                 width: 100%;
             }
             .map{
                 width: 500px;
-                height: 550px;
+                height: 600px;
             }
             .wera{
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
                 width: 500px;
-                height: 550px;
+                height: 600px;
                 overflow: hidden;
                 text-align: center;
             }
-            .wera form input{
+            .wera form input, #sel{
                 padding: 10px;
                 color: white;
                 font-size: 15px;
@@ -841,7 +841,7 @@
             .wera{
                 height: 100%;
             }
-            .wera form input{
+            .wera form input, #sel{
                 padding: 20px;
                 color: white;
                 font-size: 18px;
@@ -863,7 +863,7 @@
             .wera{
                 align-items: center;
             }
-            .wera form input{
+            .wera form input , #sel{
                 padding: 10px;
                 color: white;
                 font-size: 18px;
@@ -896,7 +896,7 @@
                 align-items: center;
                 justify-content: center;
             }
-            .wera form input{
+            .wera form input , #sel{
                 padding: 10px;
                 color: white;
                 font-size: 18px;
@@ -932,7 +932,7 @@
                 align-items: center;
                 justify-content: center;
             }
-            .wera form input{
+            .wera form input , #sel{
                 padding: 10px;
                 color: white;
                 font-size: 15px;
@@ -1208,45 +1208,20 @@
                 <input type="text" id="name" name="name" placeholder="YOUR NAME" required>
                 <input type="email" id="mail" name="email" placeholder="EMAIL ADDRESS" required>
                 <input type="number" id="num" name="number" placeholder="(+995) XXX XXX XXX" required>
-                <textarea placeholder="MESSAGE" name="message"></textarea>
+                <select name="car type" required id="sel">
+                    <option>Minivan/Van</option>
+                    <option>Sedan</option>
+                    <option>MUV</option>
+                    <option>Compact</option>
+                    <option>Crossover</option>
+                    <option>Business</option>
+                </select>
+                <textarea placeholder="MESSAGE" name="message" required></textarea>
                 <div id="btn-bdiv">
                     <button id="btn-book" type="submit">Book Now</button>
                 </div>
             </form>
         </div>
     </div>
-    <footer>
-        <!-- Messenger საუბრის დანამატი Code -->
-    <div id="fb-root"></div>
-
-    <!-- Your საუბრის დანამატი code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
-
-    <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "104097289269170");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
-
-    <!-- Your SDK code -->
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml            : true,
-          version          : 'v16.0'
-        });
-      };
-
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-    
-    </footer>
 </body>
 </html>
