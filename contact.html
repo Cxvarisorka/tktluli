@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ddac99b4fd.js" crossorigin="anonymous"></script>
+    <title>Lulini</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@300;500;700&family=Roboto:wght@400;500;700&display=swap');
+        ::-webkit-scrollbar {
+            width: 10px;
+          }
+          
+          /* Track */
+          ::-webkit-scrollbar-track {
+            background:#3b541d;
+          }
+          
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: white;
+          }
+          
+          /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+            background: #f1f1f1;
+          }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Hanken Grotesk';
+        }
+        nav{
+            top: 0;
+            position: sticky;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        body{
+            transition: 0.25s;
+        }
+        #logo{
+            text-decoration: none;
+            color: #8ECE41;
+            font-size: 60px;
+            transition: 0.25s;
+            font-weight: 700;
+        }
+        #logo:hover{
+            scale: 1.05;
+            color: black;
+        }
+        .right-shadow{
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            display: none;
+        }
+        nav div ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        nav div ul li a{
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            transition: 0.25s;
+            font-weight: 700;
+        }
+        nav div ul li a:hover{
+            color: #8ECE41;
+        }
+        nav div ul li{
+            transition: 0.25s;
+        }
+        nav div ul li:hover{
+            scale: 1.05;
+        }
+        nav{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #botom-nav{
+            display: flex;
+            width: 100%;
+            height: 80px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .tele{
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            cursor:default;
+            transition: 0.25s;
+            color: rgb(154, 153, 153);
+        }
+        .tele p{
+            font-size: 20px;
+        }
+        .tele:hover{
+            color: #8ECE41;
+        }
+        .tele i{
+            font-size: 25px;
+            color:#8ECE41;
+        }
+        #top-nav{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .top-nav-left{
+            display: flex;
+            gap: 20px;
+        }
+        #hk{
+            width: 100%;
+            height: 2px;
+            background-color:#8ECE41;
+            opacity: 1;
+        }
+        .right-i{
+            font-size: 25px;
+            color:#8ECE41;
+            transition: 0.25s;
+        }
+        .right-i:hover{
+            scale: 1.1;
+            color: black;
+        }
+        .top-nav-right{
+            display: flex;
+            gap: 10px;
+        }
+        #main-nav{
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        @media screen and (max-width: 1100px) {
+            #main-nav{
+                width: 100%;
+                padding: 0 15px;
+            }
+            
+          }
+        .checkbtn{
+            font-size: 30px;
+            color:#8ECE41;
+            cursor: pointer;
+            display: none;
+        }
+        #check{
+            display: none;
+        }
+        #kuch{
+            display: none;
+        }
+        @media screen and (max-width: 900px){
+            nav div ul li a{
+                font-size: 15px;
+            }
+            #logo{
+                font-size: 35px;
+            }
+            .tele p{
+                font-size: 15px;
+            }
+            .tele i{
+                font-size: 20px;
+            }
+            .right-i{
+                font-size: 20px;
+            }
+        }
+        @media screen and (max-width:840px){
+            .tele p{
+                display: none;
+            }
+            .tele{
+                gap: 0;
+                cursor: pointer;
+            }
+            .tele:hover{
+                scale: 1.1;
+            }
+        }
+        @media (max-width: 559){
+            nav ul li{
+                display: none;
+            }
+        }
+        @media (max-width: 600px){
+            #kuch{
+                display: block;
+            }
+            .checkbtn{
+                display: block;
+            }
+            nav ul li{
+                display: block;
+            }
+            #main-nav{
+                padding: 0;
+            }
+            .es.active{
+                left: 0;
+                transition: all 0.5s;
+            }
+            .bod.active{
+                overflow: hidden;
+            }
+            .right-shadow{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                top: 130px;
+                right: -100%;
+                background-color: #000000;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                display: block;
+            }
+            nav div ul{
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background-color:#8ECE41;
+                top: 130px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                gap: 50px;
+                transition: all 0.5s;
+                left: -100%;
+            }
+            nav div ul li a{
+                color: white;
+                font-size: 25px;
+                text-transform: uppercase;
+                padding: 5px;
+            }
+            nav div ul li a:hover{
+                color:#8ECE41;
+                background-color: white;
+                border-radius: 5px;
+            }
+        }
+        .contact{
+            width: 100%;
+            height: 750px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            gap: 50px;
+        }
+        .map{
+            width: 600px;
+            height: 650px;
+            
+        }
+        .map iframe{
+            width: 100%;
+            height: 100%;
+        }
+        .wera{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 600px;
+            height: 650px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .wera form{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        #form-header{
+            font-size: 30px;
+            font-weight: 700;
+        }
+        .links{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+        }
+        .links a{
+            color: #8ECE41;
+            text-decoration: none;
+            transition: 0.25s;
+        }
+        .links a i{
+            font-size: 30px;
+        }
+        .links a:hover{
+            scale: 1.1;
+            color: #000000;
+        }
+        .wera hr{
+            border: #d1d1d1 1px solid;
+        }
+        .wera form input,#sel{
+            padding: 20px;
+            border: none;
+            background-color: #8ECE41;
+            color: white;
+            font-size: 18px;
+            transition: 0.25s;
+        }
+        .wera form input:focus , #sel:focus{
+            background-color: #679d25;
+            outline: none;
+        }
+        #message-form{
+            height: 200px;
+            padding: 0;
+        }
+        .wera form textarea{
+            font-size: 20px;
+            padding: 20px;
+            height: 130px;
+            max-width: 100%;
+            max-height: 150px;
+            border: none;
+            background-color: #8ECE41;
+            transition: 0.25s;
+        }
+        .wera form textarea:focus{
+            background-color: #679d25;
+            outline: none;
+        }
+        #small-form-info{
+            color: rgb(79, 79, 79);
+            font-size: 18px;
+        }
+        #btn-book{
+            font-size: 20px;
+            border: none;
+            background-color: #8ECE41;
+            color: white;
+            padding: 20px;
+            width: 300px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        #btn-book:hover{
+            background-color: #69982f;
+            scale: 1.05;
+        }
+        @media screen and (max-width:1265px){
+            .contact{
+                height: 700px;
+                width: 100%;
+            }
+            .map{
+                width: 550px;
+                height: 650px;
+            }
+            .wera{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                width: 550px;
+                height: 600px;
+                overflow: hidden;
+                text-align: center;
+            }
+            .wera form input, #sel{
+                padding: 15px;
+                color: white;
+                font-size: 20px;
+            }
+            .wera form input:focus{
+                background-color: #679d25;
+                outline: none;
+            }
+            #message-form{
+                height: 200px;
+                padding: 0;
+            }
+            .wera form textarea{
+                font-size: 20px;
+                padding: 15px;
+                height: 110px;
+            }
+        }
+        @media screen and (max-width:1050px){
+            .contact{
+                height: 100%;
+                width: 100%;
+                margin-bottom: 50px;
+                margin-top: 50px;
+            }
+            .wera{
+                height: 100%;
+            }
+            .wera form input, #sel{
+                padding: 20px;
+                color: white;
+                font-size: 18px;
+            }
+            .wera form textarea{
+                font-size: 18px;
+                padding: 20px;
+                height: 150px;
+            }
+            .contact{
+                flex-direction: column;
+            }
+        }
+        @media screen and (max-width:500px){
+            .map{
+                width: 400px;
+                height: 400px;
+            }
+            .wera{
+                align-items: center;
+            }
+            .wera form input , #sel{
+                padding: 10px;
+                color: white;
+                font-size: 18px;
+                width: 400px;
+            }
+            .wera form textarea{
+                font-size: 18px;
+                padding: 20px;
+                height: 150px;
+                width: 400px;
+            }
+            #form-header{
+                font-size: 25px;
+            }
+            #small-form-info{
+                font-size: 15px;
+                width: 350px;
+            }
+            #btn-book{
+                padding: 10px;
+            }
+        }
+        @media screen and (max-width:500px){
+            .map{
+                width: 300px;
+                height: 300px;
+            }
+            .wera{
+                width: 300px;
+                align-items: center;
+                justify-content: center;
+            }
+            .wera form input , #sel{
+                padding: 10px;
+                color: white;
+                font-size: 18px;
+                width: 300px;
+            }
+            .wera form textarea{
+                font-size: 18px;
+                padding: 20px;
+                height: 120px;
+                width: 300px;
+            }
+            #form-header{
+                font-size: 25px;
+            }
+            #small-form-info{
+                font-size: 15px;
+                width: 100%;
+            }
+            #btn-book{
+                padding: 10px;
+            }
+        }
+        @media screen and (max-width:300px){
+            .contact{
+                width: 100%;
+            }
+            .map{
+                width: 200px;
+                height: 200px;
+            }
+            .wera{
+                width: 200px;
+                align-items: center;
+                justify-content: center;
+            }
+            .wera form input , #sel{
+                padding: 10px;
+                color: white;
+                font-size: 15px;
+                width: 200px;
+            }
+            .wera form textarea{
+                font-size: 15px;
+                padding: 10px;
+                height: 120px;
+                width: 200px;
+            }
+            #form-header{
+                font-size: 25px;
+            }
+            #small-form-info{
+                font-size: 15px;
+                width: 100%;
+            }
+            #btn-book{
+                padding: 10px;
+            }
+            #btn-bdiv{
+                width: 200px;
+            }
+            #btn-book{
+                width: 100%;
+                font-size: 15px;
+            }
+        }
+        .after-nav{
+            width: 100%;
+            height: 200px;
+            background-image: url("./Images/hudson-regele-oyfyU2V4bCM-unsplash.jpg");
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:white;
+            transition: 0.25s;
+        }
+        .after-nav:hover{
+            background-image: url("./Images/4k-forest-with-dirt-pathway-sssu9mpkfvsfewvs.jpg");
+        }
+        footer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 400px;
+            background-color: #8ECE41;
+            color: white;
+        }
+        .final-div{
+            height: 100%;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            gap: 20px;
+            
+        }
+        #foot-head{
+            font-size: 40px;
+            font-weight: 700;
+        }
+        .final-div p{
+            font-size: 20px;
+        }
+        .socials-foot{
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+        }
+        .socials-foot a{
+            color: white;
+        }
+        .socials-foot a i{
+            font-size: 25px;
+            background-color: white;
+            color: #8ECE41;
+            padding: 10px;
+            transition: 0.25s;
+        }
+        .socials-foot a i:hover{
+            color: white;
+            background-color: #3b541d;
+        }
+        .bottom-foot{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #3b541d;
+            height: 90px;
+        }
+        .bottom-foot ul{
+            display: flex;
+            list-style-type: none;
+            gap: 10px;
+        }
+        .bottom-foot ul li a{
+            color: white;
+            font-size: 20px;
+            transition: all 0.25s;
+        }
+        .bottom-foot ul li{
+            transition: all 0.25s;
+        }
+        .bottom-foot ul li:hover{
+            scale: 1.1;
+        }
+        .bottom-foot p a{
+            color: white;
+            font-size: 20px;
+        }
+        .bottom-foot p a:hover{
+            color: #69982f;
+            font-size: 20px;
+        }
+        #creator{
+            font-size: 20px;
+        }
+        .bottom-foot hr{
+            height: 20px;
+            border: 1px white solid;
+        }
+        @media screen and (max-width: 1000px){
+            footer{
+                height: 550px;
+            }
+            .bottom-foot{
+                height: 200px;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+            .bottom-foot hr{
+                display: none;
+            }
+            .bottom-foot ul{
+                display: flex;
+                list-style-type: none;
+                gap: 10px;
+            }
+            .bottom-foot ul li a{
+                color: white;
+                font-size: 20px;
+                transition: all 0.25s;
+            }
+            .bottom-foot ul li{
+                transition: all 0.25s;
+            }
+            .bottom-foot ul li:hover{
+                scale: 1.1;
+            }
+            .bottom-foot p a{
+                color: white;
+                font-size: 20px;
+            }
+            .bottom-foot p a:hover{
+                color: #69982f;
+                font-size: 20px;
+            }
+            #creator{
+                font-size: 20px;
+            }
+            .bottom-foot hr{
+                height: 20px;
+                border: 1px white solid;
+            }
+        }
+        @media screen and (max-width:690px){
+            .final-div{
+                width: 250px;
+            }
+            #foot-head{
+                font-size: 30px;
+                font-weight: 700;
+            }
+            .final-div p{
+                font-size: 15px;
+            }
+            .socials-foot{
+                display: flex;
+                justify-content: space-around;
+                gap: 10px;
+            }
+            .socials-foot a{
+                color: white;
+            }
+            .socials-foot a i{
+                font-size: 20px;
+                background-color: white;
+                color: #8ECE41;
+                padding: 10px;
+                transition: 0.25s;
+            }
+            .bottom-foot ul li a{
+                color: white;
+                font-size: 17px;
+                transition: all 0.25s;
+            }
+            .bottom-foot ul li{
+                transition: all 0.25s;
+            }
+            .bottom-foot ul li:hover{
+                scale: 1.1;
+            }
+            .bottom-foot p a{
+                color: white;
+                font-size: 17px;
+            }
+            .bottom-foot p a:hover{
+                color: #69982f;
+                font-size: 20px;
+            }
+            #creator{
+                font-size: 17px;
+            }
+        }
+        @media screen and (max-width:330px){
+            .final-div{
+                width: 200px;
+            }
+            #foot-head{
+                font-size: 30px;
+                font-weight: 700;
+            }
+            .final-div p{
+                font-size: 15px;
+            }
+            .socials-foot{
+                display: flex;
+                justify-content: space-around;
+                gap: 10px;
+            }
+            .socials-foot a{
+                color: white;
+            }
+            .socials-foot a i{
+                font-size: 15px;
+                background-color: white;
+                color: #8ECE41;
+                padding: 10px;
+                transition: 0.25s;
+            }
+            .bottom-foot ul li a{
+                color: white;
+                font-size: 15px;
+                transition: all 0.25s;
+            }
+            .bottom-foot ul li{
+                transition: all 0.25s;
+            }
+            .bottom-foot ul li:hover{
+                scale: 1.1;
+            }
+            .bottom-foot p a{
+                color: white;
+                font-size: 15px;
+            }
+            .bottom-foot p a:hover{
+                color: #69982f;
+                font-size: 15px;
+            }
+            #creator{
+                font-size: 15px;
+            }
+        }
+        .logo-for-lulini{
+            width: 100%;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        .logo-for-lulini img{
+            width: 300px;
+            height: 250px;
+        }
+        @media screen and (max-width: 350px){
+            .bottom-foot ul{
+                gap: 5px;
+            }
+            .bottom-foot ul li a{
+                color: white;
+                font-size: 15px;
+                transition: all 0.25s;
+            }
+        }
+        @media screen and (max-width: 280px){
+            .logo-for-lulini img{
+                width: 250px;
+                height: 200px;
+            }
+        }
+        @media screen and (max-width: 330px){
+            #logo{
+                font-size: 30px;
+            }   
+        }
+        @media screen and (max-width: 600px){
+            #main-nav{
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <nav id="nv">
+        <div id="main-nav">
+            <div id="top-nav">
+                <div class="top-nav-left">
+                    <div class="tele">
+                        <i class="fa-solid fa-square-phone"></i>
+                        <p>(+995) 555 277 335</p>
+                    </div>
+                    <div class="tele">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>Lulini2023@gmail.com</p>
+                    </div>
+                    <div class="tele">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Georgia,Tbilisi</p>
+                    </div>
+                </div>
+                <div class="top-nav-right">
+                    <a href="https://www.facebook.com/Luka.Tskhvaradze?mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-square-facebook right-i"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=995555277335" target="_blank"><i class="fa-brands fa-whatsapp right-i"></i></a>
+                    <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Flulinitransport%3Figshid%3DMzRlODBiNWFlZA%253D%253D%26fbclid%3DIwAR0rnaL-4t7TkIVUZfLleJ67dYzzSp-wA6A-niXczm7RrOnKiejSKvG7pQ0&h=AT1HYp7jP2QihzdosNkyfXa1C7_yghZLMmNI5Had7b_DH7euySuWkDcF2yqs9mB6PCAa0jCV7c9fqWmltgGxsWV21_YNNClv5eSQMetkd6AebSQiH-6fsFoXiH-6qyOZA-GOxw" target="_blank"><i class="fa-brands fa-square-instagram right-i"></i></a>
+                </div>
+            </div>
+            <div id="hk"></div>
+            <div id="botom-nav">
+                <a id="logo" href="index.html">Lulini Transport</a>
+                <ul class="es">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./Book.html">Book</a></li>
+                    <li><a href="./Service.html">Services</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./Tours.html">Tours</a></li>
+                </ul>
+
+                <a id="kuch"><input type="button" id="check"></a>
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <script>
+                    but = document.querySelector("#check");
+                    but.onclick = function(){
+                        nav = document.querySelector(".es");
+                        nav.classList.toggle("active");
+                        bd = document.querySelector(".bod");
+                        bd.classList.toggle("active");
+                    }
+                </script>
+            </div>
+
+        </div>
+    </nav>
+    <div class="right-shadow"></div>
+    <div class="after-nav">
+        <p style="font-weight: 800; font-size: 50px;">CONTACT</p>
+    </div>
+    <div class="contact">
+        <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95334.94980942318!2d44.76107674448201!3d41.69424703471852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40440cd7e64f626b%3A0x61d084ede2576ea3!2sTbilisi!5e0!3m2!1sen!2sge!4v1684166688921!5m2!1sen!2sge" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+        <div class="wera">
+            <p id="form-header">Contact Us In Several Platforms</p>
+            <hr>
+            <div class="links">
+                <a href="https://www.facebook.com/Luka.Tskhvaradze/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Flulinitransport%3Figshid%3DMzRlODBiNWFlZA%253D%253D%26fbclid%3DIwAR0QQH77RiBIumvQwvmMnI3yMbxMMX9lkOgMFLouI5oAPJo55BU6YdvidIo&h=AT1u44w_drsSbMaMQ3AgCT6Sy5kI1VYsn-V5tBzoYpCbbqtyCj8Rz78pFc9Ei7cakloNXtWjyv137R_k-m3-iappidyfkvy8DVcH3_fdt42iuNpdS-QCzygYYBcn493vY5Lf8Q" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=995555277335" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            <p id="small-form-info">We value your feedback and will do our best to respond to your inquiries as soon as possible. Whether you have a query about our products, services, or any other matter, we are here to assist you.</p>
+            <form action="https://formsubmit.co/14b3cc54bd5808d388a19d560256e654" method="POST">
+
+                <input type="text" name="_honey" style="display: none;">
+
+                <!-- Disable Captcha -->
+
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="text" id="name" name="name" placeholder="YOUR NAME *" required>
+                <input type="email" id="mail" name="email" placeholder="EMAIL ADDRESS *" required>
+                <input type="tel" id="num" name="number" placeholder="(+995) XXX XXX XXX">
+                <textarea placeholder="MESSAGE *" name="message" required></textarea>
+                <div id="btn-bdiv">
+                    <button id="btn-book" type="submit">Book Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="logo-for-lulini">
+        <a href="#"><img src="./images/FullLogo_Transparent.png"></a>
+    </div>
+    <footer>
+        <div class="final-div">
+            <p id="foot-head">Lulini Web Development</p>
+            <p>
+                Lulini Development Group: Crafting captivating websites with cutting-edge technology and stunning design, tailored to your business needs. Trust us for your online presence.</p>
+            <div class="socials-foot">
+                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Flulinitransport%3Figshid%3DMzRlODBiNWFlZA%253D%253D%26fbclid%3DIwAR0QQH77RiBIumvQwvmMnI3yMbxMMX9lkOgMFLouI5oAPJo55BU6YdvidIo&h=AT1u44w_drsSbMaMQ3AgCT6Sy5kI1VYsn-V5tBzoYpCbbqtyCj8Rz78pFc9Ei7cakloNXtWjyv137R_k-m3-iappidyfkvy8DVcH3_fdt42iuNpdS-QCzygYYBcn493vY5Lf8Q" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/Luka.Tskhvaradze/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=995555277335" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="bottom-foot">
+            <p>Copyright @2023 <a href="#">LuliniDevelopment</a></p>
+            <hr>
+            <p id="creator">Created By <a href="https://www.facebook.com/profile.php?id=100088419544165" target="_blank">Luka Tskhvaradze</a></p>
+            <hr>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Book.html">Book</a></li>
+                <li><a href="./Service.html">Services</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./albums.html">Albums</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>

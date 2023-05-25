@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ddac99b4fd.js" crossorigin="anonymous"></script>
+    <title>Lulini</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@300;500;700&family=Roboto:wght@400;500;700&display=swap');
+        ::-webkit-scrollbar {
+            width: 10px;
+          }
+          
+          /* Track */
+          ::-webkit-scrollbar-track {
+            background:#3b541d;
+          }
+          
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: white;
+          }
+          
+          /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+            background: #f1f1f1;
+          }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Hanken Grotesk';
+        }
+        body{
+            transition: 0.25s;
+        }
+        #logo{
+            text-decoration: none;
+            color: #8ECE41;
+            font-size: 60px;
+            transition: 0.25s;
+            font-weight: 700;
+        }
+        #logo:hover{
+            scale: 1.05;
+            color: black;
+        }
+        nav div ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        nav div ul li a{
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            transition: 0.25s;
+            font-weight: 700;
+        }
+        nav div ul li a:hover{
+            color: #8ECE41;
+        }
+        nav div ul li{
+            transition: 0.25s;
+        }
+        nav div ul li:hover{
+            scale: 1.05;
+        }
+        nav{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #botom-nav{
+            display: flex;
+            width: 100%;
+            height: 80px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .tele{
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            cursor:default;
+            transition: 0.25s;
+            color: rgb(154, 153, 153);
+        }
+        .tele p{
+            font-size: 20px;
+        }
+        .tele:hover{
+            color: #8ECE41;
+        }
+        .tele i{
+            font-size: 25px;
+            color:#8ECE41;
+        }
+        #top-nav{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .top-nav-left{
+            display: flex;
+            gap: 20px;
+        }
+        #hk{
+            width: 100%;
+            height: 2px;
+            background-color:#8ECE41;
+            opacity: 1;
+        }
+        .right-i{
+            font-size: 25px;
+            color:#8ECE41;
+            transition: 0.25s;
+        }
+        .right-i:hover{
+            scale: 1.1;
+            color: black;
+        }
+        .top-nav-right{
+            display: flex;
+            gap: 10px;
+        }
+        #main-nav{
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        @media screen and (max-width: 1100px) {
+            #main-nav{
+                width: 100%;
+                padding: 0 15px;
+            }
+            
+          }
+        .checkbtn{
+            font-size: 30px;
+            color:#8ECE41;
+            cursor: pointer;
+            display: none;
+        }
+        #check{
+            display: none;
+        }
+        #kuch{
+            display: none;
+        }
+        @media screen and (max-width: 900px){
+            nav div ul li a{
+                font-size: 15px;
+            }
+            #logo{
+                font-size: 35px;
+            }
+            .tele p{
+                font-size: 15px;
+            }
+            .tele i{
+                font-size: 20px;
+            }
+            .right-i{
+                font-size: 20px;
+            }
+        }
+        @media screen and (max-width:840px){
+            .tele p{
+                display: none;
+            }
+            .tele{
+                gap: 0;
+                cursor: pointer;
+            }
+            .tele:hover{
+                scale: 1.1;
+            }
+        }
+        @media (max-width: 559){
+            nav ul li{
+                display: none;
+            }
+        }
+        @media (max-width: 600px){
+            #kuch{
+                display: block;
+            }
+            .checkbtn{
+                display: block;
+            }
+            nav ul li{
+                display: block;
+            }
+            #main-nav{
+                padding: 0;
+            }
+            .es.active{
+                left: 0;
+                transition: 0.25s;
+            }
+            .bod.active{
+                overflow: hidden;
+            }
+            nav div ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background-color:#8ECE41;
+                top: 130px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                gap: 50px;
+                transition: all 0.5s;
+                left: -100%;
+            }
+            nav div ul li a{
+                color: white;
+                font-size: 25px;
+                text-transform: uppercase;
+                padding: 5px;
+            }
+            nav div ul li a:hover{
+                color:#8ECE41;
+                background-color: white;
+                border-radius: 5px;
+            }
+        }
+    </style>
+</head>
+<body class="bod">
+    <nav id="nv">
+        <div id="main-nav">
+            <div id="top-nav">
+                <div class="top-nav-left">
+                    <div class="tele">
+                        <i class="fa-solid fa-square-phone"></i>
+                        <p>(+995) 555 277 335</p>
+                    </div>
+                    <div class="tele">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>Lulini2023@gmail.com</p>
+                    </div>
+                    <div class="tele">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Georgia,Tbilisi</p>
+                    </div>
+                </div>
+                <div class="top-nav-right">
+                    <a href="https://www.facebook.com/Luka.Tskhvaradze?mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-square-facebook right-i"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=995555277335" target="_blank"><i class="fa-brands fa-whatsapp right-i"></i></a>
+                    <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Flulinitransport%3Figshid%3DMzRlODBiNWFlZA%253D%253D%26fbclid%3DIwAR0rnaL-4t7TkIVUZfLleJ67dYzzSp-wA6A-niXczm7RrOnKiejSKvG7pQ0&h=AT1HYp7jP2QihzdosNkyfXa1C7_yghZLMmNI5Had7b_DH7euySuWkDcF2yqs9mB6PCAa0jCV7c9fqWmltgGxsWV21_YNNClv5eSQMetkd6AebSQiH-6fsFoXiH-6qyOZA-GOxw" target="_blank"><i class="fa-brands fa-square-instagram right-i"></i></a>
+                </div>
+            </div>
+            <div id="hk"></div>
+            <div id="botom-nav">
+                <a id="logo" href="index.html">Lulini Transport</a>
+                <ul class="es">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./Book.html">Book</a></li>
+                    <li><a href="./Service.html">Services</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./Tours.html">Tours</a></li>
+                </ul>
+                <a href="#" id="kuch"><input type="button" id="check"></a>
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <script>
+                    but = document.querySelector("#check");
+                    but.onclick = function(){
+                        nav = document.querySelector(".es");
+                        nav.classList.toggle("active");
+                        bd = document.querySelector(".bod");
+                        bd.classList.toggle("active");
+                    }
+                </script>
+            </div>
+
+        </div>
+    </nav>
+    <main>
+        <div class="final-main">
+            <div class="left-main">
+                <div class="left-main-top">
+                    <button id="transfer">Transfer</button>
+                    <button id="taxi">Taxi</button>
+                </div>
+                <div class="location-div">
+                    <input type="text" placeholder="From: address, airport,hotel" required id="from-loc">
+                    <input type="text" placeholder="To: address, airport,hotel" required id="To-loc">
+                </div>
+                <div ></div>
+            </div>
+            <div class="right-main"></div>
+        </div>
+    </main>
+</body>
+</html>

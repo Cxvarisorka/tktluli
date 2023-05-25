@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ddac99b4fd.js" crossorigin="anonymous"></script>
+    <title>Lulini</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@300;500;700&family=Roboto:wght@400;500;700&display=swap');
+        ::-webkit-scrollbar {
+            width: 10px;
+          }
+          
+          /* Track */
+          ::-webkit-scrollbar-track {
+            background:#3b541d;
+          }
+          
+          /* Handle */
+          ::-webkit-scrollbar-thumb {
+            background: white;
+          }
+          
+          /* Handle on hover */
+          ::-webkit-scrollbar-thumb:hover {
+            background: #f1f1f1;
+          }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Hanken Grotesk';
+        }
+        nav{
+            top: 0;
+            position:sticky;
+            background-color: #ffffff;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        body{
+            transition: 0.25s;
+        }
+        #logo{
+            text-decoration: none;
+            color: #8ECE41;
+            font-size: 60px;
+            transition: 0.25s;
+            font-weight: 700;
+        }
+        #logo:hover{
+            scale: 1.05;
+            color: black;
+        }
+        nav div ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        nav div ul li a{
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            transition: 0.25s;
+            font-weight: 700;
+        }
+        nav div ul li a:hover{
+            color: #8ECE41;
+        }
+        nav div ul li{
+            transition: 0.25s;
+        }
+        nav div ul li:hover{
+            scale: 1.05;
+        }
+        nav{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #botom-nav{
+            display: flex;
+            width: 100%;
+            height: 80px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .tele{
+            gap: 10px;
+            display: flex;
+            align-items: center;
+            cursor:default;
+            transition: 0.25s;
+            color: rgb(154, 153, 153);
+        }
+        .tele p{
+            font-size: 20px;
+        }
+        .tele:hover{
+            color: #8ECE41;
+        }
+        .tele i{
+            font-size: 25px;
+            color:#8ECE41;
+        }
+        #top-nav{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .top-nav-left{
+            display: flex;
+            gap: 20px;
+        }
+        #hk{
+            width: 100%;
+            height: 2px;
+            background-color:#8ECE41;
+            opacity: 1;
+        }
+        .right-i{
+            font-size: 25px;
+            color:#8ECE41;
+            transition: 0.25s;
+        }
+        .right-i:hover{
+            scale: 1.1;
+            color: black;
+        }
+        .top-nav-right{
+            display: flex;
+            gap: 10px;
+        }
+        #main-nav{
+            width: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        @media screen and (max-width: 1100px) {
+            #main-nav{
+                width: 100%;
+                padding: 0 15px;
+            }
+            
+          }
+        .checkbtn{
+            font-size: 30px;
+            color:#8ECE41;
+            cursor: pointer;
+            display: none;
+        }
+        #check{
+            display: none;
+        }
+        #kuch{
+            display: none;
+        }
+        @media screen and (max-width: 900px){
+            nav div ul li a{
+                font-size: 15px;
+            }
+            #logo{
+                font-size: 35px;
+            }
+            .tele p{
+                font-size: 15px;
+            }
+            .tele i{
+                font-size: 20px;
+            }
+            .right-i{
+                font-size: 20px;
+            }
+        }
+        @media screen and (max-width:840px){
+            .tele p{
+                display: none;
+            }
+            .tele{
+                gap: 0;
+                cursor: pointer;
+            }
+            .tele:hover{
+                scale: 1.1;
+            }
+        }
+        @media (max-width: 559){
+            nav ul li{
+                display: none;
+            }
+        }
+        @media (max-width: 600px){
+            #kuch{
+                display: block;
+            }
+            .checkbtn{
+                display: block;
+            }
+            nav ul li{
+                display: block;
+            }
+            #main-nav{
+                padding: 0;
+            }
+            .es.active{
+                left: 0;
+                transition: 0.25s;
+            }
+            .bod.active{
+                overflow: hidden;
+            }
+            nav div ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background-color:#8ECE41;
+                top: 130px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 50px;
+                gap: 50px;
+                transition: all 0.5s;
+                left: -100%;
+            }
+            nav div ul li a{
+                color: white;
+                font-size: 25px;
+                text-transform: uppercase;
+                padding: 5px;
+            }
+            nav div ul li a:hover{
+                color:#8ECE41;
+                background-color: white;
+                border-radius: 5px;
+            }
+        }
+        .after-nav{
+            width: 100%;
+            height: 350px;
+            background-color: #8ECE41;
+            background-image: url("./images/wallpaperflare.com_wallpaper\ \(6\).jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: 0.25s;
+        }
+        .after-nav:hover{
+            background-image: url("./Images/fotor_2023-5-23_20_10_7.jpg");
+        }
+        .after-nav div{
+            color: white;
+            width: 850px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+        }
+        #head-after-nav{  
+            font-size:40px; 
+            font-weight:bold;
+        }
+        #after-nav-info{
+            font-size: 25px;
+        }
+        .after-nav div a{
+            text-decoration: none;
+        }
+        .after-nav div a button{
+            border: none;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            background-color: transparent;
+            border: 1px white solid;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .after-nav div a button:hover{
+            scale: 1.05;
+            color: black;
+            background-color: white;
+        }
+        @media screen and (max-width:1125px){
+            #head-after-nav{
+                font-size: 30px;
+            }
+            #after-nav-info{
+                font-size: 18px;
+            }
+            .after-nav div{
+                width: 500px;
+            }
+            .after-nav div a button{
+                padding: 10px;
+                font-size: 18px;
+            }
+        }
+        @media screen and (max-width:800px){
+            .after-nav div{
+                width: 600px;
+            }
+        }
+        @media screen and (max-width:600px){
+            .after-nav{
+                height: 400px;
+            }
+            .after-nav div{
+                width: 300px;
+            }
+        }
+        @media screen and (max-width:300px){
+            .after-nav{
+                height: 500px;
+            }
+            #head-after-nav{
+                font-size: 25px;
+            }
+            #after-nav-info{
+                font-size: 17px;
+            }
+            .after-nav div{
+                width: 200px;
+            }
+            .after-nav div a button{
+                padding: 10px;
+                font-size: 17px;
+            }
+        }
+        .tours{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        .tours-header{
+            display: flex;
+            flex-direction: column;
+            height: 30%;
+            width: 100%;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+        }
+        .tours-header hr{
+            width: 400px;
+            border: 2px solid #8ECE41;
+        }
+        .tours-header p{
+            font-size: 50px;
+            font-weight: 800;
+        }
+        @media screen and (max-width: 440px){
+            .tours-header hr{
+                width: 250px;
+            }
+            .tours-header p{
+                font-size: 30px;
+            }
+        }
+        @media screen and (max-width: 330px){
+            #logo{
+                font-size: 30px;
+            }   
+        }
+        @media screen and (max-width: 600px){
+            #main-nav{
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        }
+        .cards{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            
+        }
+        .card-posts{
+            width: 400px;
+            height: 400px;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            transition: 0.25s;
+            overflow: hidden;
+            text-align: center;
+        }
+        .card-posts:hover{
+            scale: 1.05;
+            
+        }
+        .card-image{
+            width: 100%;
+            height: 50%;
+            background-color: #8ECE41;
+            overflow: hidden;
+        }
+        .card-image img{
+            transition: 0.25s;
+        }
+        .card-image img:hover{
+            scale: 1.1;
+        }
+        
+        .card-info{
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .card-info p{
+            width: 320px;
+            font-size: 20px;
+        }
+        .card-info button{
+            width: 130px;
+            padding: 10px 30px;
+            font-weight: 700;
+            font-size: 20px;
+            border: none;
+            background-color: #8ECE41;
+            color: white;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        .card-info button:hover{
+            background-color: #3b541d;
+            scale: 1.05;
+        }
+        @media screen and (max-width:450px){
+            .card-posts{
+                width: 350px;
+                height: 350px;
+            }
+            .card-info p{
+                width: 300px;
+                font-size: 18px;
+            }
+            .card-info button{
+                font-size: 18px;
+            }
+        }
+        @media screen and (max-width: 375px){
+            .card-posts{
+                width: 270px;
+                height: 270px;
+            }
+            .card-posts:hover{
+                scale: 1.01;
+                box-shadow: #8ECE41 0px 5px 15px;
+            }
+            .card-info p{
+                width: 220px;
+                font-size: 14px;
+            }
+            .card-info button{
+                padding: 10px 30px;
+                font-size: 15px;
+            }
+        }
+        .left-cards{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+            width: 50%;
+        }
+        .right-cards{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100%;
+            width: 50%;
+        }
+        @media screen and (max-width: 1660px){
+            .tours-header{
+                height: 15%;
+            }
+            .cards{
+                height: 100%;
+                align-items: center;
+                justify-content: space-around;
+                flex-direction: column;
+                gap: 50px;
+            }
+            .tours{
+                height: 100%;
+            }
+            .left-cards{
+                justify-content: center;
+                gap: 50px;
+                height: 100%;
+                width: 100%;
+            }
+            .right-cards{
+                justify-content: center;
+                gap: 50px;
+                width: 100%;
+            }
+        }
+        @media screen and (max-width: 1000px){
+            .tours-header{
+                height: 5%;
+                gap: 10px;
+                justify-content: space-around;
+                
+            }
+            .left-cards{
+                flex-direction: column;
+            }
+            .right-cards{
+                flex-direction: column;
+            }
+            .tours{
+                margin-top: 50px;
+                height: 100%;
+                margin-bottom: 50px;
+            }
+        }
+        .regions{
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+        .tours{
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .tours-header{
+            margin-bottom: 50px;
+        }
+        .after-tours{
+            width: 100%;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            background-color: #2f496e;
+            background-image: url("./images/wallpaperflare.com_wallpaper.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 50px;
+            transition: background-image 0.25s;
+            color: white;
+        }
+        .after-tours:hover{
+            background-image: url("./Images/wallpaperflare.com_wallpaper\ \(2\).jpg");
+            
+        }
+        #header-after-tours{
+            font-size: 70px;
+            font-weight: 700;
+            transition: 0.25s;
+        }
+        #header-after-tours:hover{
+            scale: 1.5;
+            color: #7aa348;
+        }
+        #small-quoute{
+            font-size: 30px;
+            width: 1100px;
+            transition: 0.25s;
+        }
+        @media screen and (max-width: 1220px){
+            #small-quoute{
+                font-size: 20px;
+                width: 500px;
+                transition: 0.25s;
+            }
+        }
+        @media screen and (max-width: 500px){
+            #header-after-tours{
+                font-size: 50px;
+            }
+            #small-quoute{
+                font-size: 18px;
+                width: 280px;
+                transition: 0.25s;
+            }
+        }
+        footer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 400px;
+            background-color: #8ECE41;
+            color: white;
+        }
+        .final-div{
+            height: 100%;
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            gap: 20px;
+            
+        }
+        #foot-head{
+            font-size: 40px;
+            font-weight: 700;
+        }
+        .final-div p{
+            font-size: 20px;
+        }
+        .socials-foot{
+            display: flex;
+            justify-content: space-around;
+            gap: 10px;
+        }
+        .socials-foot a{
+            color: white;
+        }
+        .socials-foot a i{
+            font-size: 25px;
+            background-color: white;
+            color: #8ECE41;
+            padding: 10px;
+            transition: 0.25s;
+        }
+        .socials-foot a i:hover{
+            color: white;
+            background-color: #3b541d;
+        }
+        .bottom-foot{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #3b541d;
+            height: 90px;
+        }
+        .bottom-foot ul{
+            display: flex;
+            list-style-type: none;
+            gap: 10px;
+        }
+        .bottom-foot ul li a{
+            color: white;
+            font-size: 20px;
+            transition: all 0.25s;
+        }
+        .bottom-foot ul li{
+            transition: all 0.25s;
+        }
+        .bottom-foot ul li:hover{
+            scale: 1.1;
+        }
+        .bottom-foot p a{
+            color: white;
+            font-size: 20px;
+        }
+        .bottom-foot p a:hover{
+            color: #69982f;
+            font-size: 20px;
+        }
+        #creator{
+            font-size: 20px;
+        }
+        .bottom-foot hr{
+            height: 20px;
+            border: 1px white solid;
+        }
+        @media screen and (max-width: 1000px){
+            footer{
+                height: 550px;
+            }
+            .bottom-foot{
+                height: 200px;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+            .bottom-foot hr{
+                display: none;
+            }
+            .bottom-foot ul{
+                display: flex;
+                list-style-type: none;
+                gap: 10px;
+            }
+            .bottom-foot ul li a{
+                color: white;
+                font-size: 20px;
+                transition: all 0.25s;
+            }
+            .bottom-foot ul li{
+                transition: all 0.25s;
+            }
+            .bottom-foot ul li:hover{
+                scale: 1.1;
+            }
+            .bottom-foot p a{
+                color: white;
+                font-size: 20px;
+            }
+            .bottom-foot p a:hover{
+                color: #69982f;
+                font-size: 20px;
+            }
+            #creator{
+                font-size: 20px;
+            }
+            .bottom-foot hr{
+                height: 20px;
+                border: 1px white solid;
+            }
+        }
+        @media screen and (max-width:690px){
+            .final-div{
+                width: 250px;
+            }
+            #foot-head{
+                font-size: 30px;
+                font-weight: 700;
+            }
+            .final-div p{
+                font-size: 15px;
+            }
+            .socials-foot{
+                display: flex;
+                justify-content: space-around;
+                gap: 10px;
+            }
+            .socials-foot a{
+                color: white;
+            }
+            .socials-foot a i{
+                font-size: 20px;
+                background-color: white;
+                color: #8ECE41;
+                padding: 10px;
+                transition: 0.25s;
+            }
+            .bottom-foot ul li a{
+                color: white;
+                font-size: 17px;
+                transition: all 0.25s;
+            }
+            .bottom-foot ul li{
+                transition: all 0.25s;
+            }
+            .bottom-foot ul li:hover{
+                scale: 1.1;
+            }
+            .bottom-foot p a{
+                color: white;
+                font-size: 17px;
+            }
+            .bottom-foot p a:hover{
+                color: #69982f;
+                font-size: 20px;
+            }
+            #creator{
+                font-size: 17px;
+            }
+        }
+        @media screen and (max-width: 340px){
+            .bottom-foot ul li a{
+                font-size: 14px;
+            }
+        }
+        .logo-for-lulini{
+            width: 100%;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+        .logo-for-lulini img{
+            width: 300px;
+            height: 250px;
+        }
+        @media screen and (max-width: 280px){
+            .logo-for-lulini img{
+                width: 250px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body class="bod">
+    <nav id="nv">
+        <div id="main-nav">
+            <div id="top-nav">
+                <div class="top-nav-left">
+                    <div class="tele">
+                        <i class="fa-solid fa-square-phone"></i>
+                        <p>(+995) 555 277 335</p>
+                    </div>
+                    <div class="tele">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>Lulini2023@gmail.com</p>
+                    </div>
+                    <div class="tele">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Georgia,Tbilisi</p>
+                    </div>
+                </div>
+                <div class="top-nav-right">
+                    <a href="https://www.facebook.com/Luka.Tskhvaradze?mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-square-facebook right-i"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=995555277335" target="_blank"><i class="fa-brands fa-whatsapp right-i"></i></a>
+                    <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Flulinitransport%3Figshid%3DMzRlODBiNWFlZA%253D%253D%26fbclid%3DIwAR0rnaL-4t7TkIVUZfLleJ67dYzzSp-wA6A-niXczm7RrOnKiejSKvG7pQ0&h=AT1HYp7jP2QihzdosNkyfXa1C7_yghZLMmNI5Had7b_DH7euySuWkDcF2yqs9mB6PCAa0jCV7c9fqWmltgGxsWV21_YNNClv5eSQMetkd6AebSQiH-6fsFoXiH-6qyOZA-GOxw" target="_blank"><i class="fa-brands fa-square-instagram right-i"></i></a>
+                </div>
+            </div>
+            <div id="hk"></div>
+            <div id="botom-nav">
+                <a id="logo" href="index.html">Lulini Transport</a>
+                <ul class="es">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./Book.html">Book</a></li>
+                    <li><a href="./Service.html">Services</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./Tours.html">Tours</a></li>
+                </ul>
+                <a id="kuch"><input type="button" id="check"></a>
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <script>
+                    but = document.querySelector("#check");
+                    but.onclick = function(){
+                        nav = document.querySelector(".es");
+                        nav.classList.toggle("active");
+                        bd = document.querySelector(".bod");
+                        bd.classList.toggle("active");
+                    }
+                </script>
+            </div>
+
+        </div>
+    </nav>
+    <div class="after-nav">
+        <div>
+            <p id="head-after-nav">Tours Around Georgia</p>
+            <p id="after-nav-info">Discover the wonders of Georgia with Lulini Tours. From scenic hikes to cultural explorations, our diverse range of tours ensures an unforgettable experience. Immerse yourself in nature, soak up rich history, and create memories that will last a lifetime. Let us be your guide to the hidden treasures of Lulini and beyond.</p>
+            <a href="./contact.html"><button>Contact Us</button></a>
+        </div>
+    </div>
+    <div class="tours">
+        <div class="tours-header">
+            <hr>
+            <p>Tours</p>
+        </div>
+        <div class="regions">
+            <div class="cards">
+                <div class="left-cards">
+                    <div class="card-posts">
+                        <div class="card-image">
+                            <img src="./Posts/900_900_fixed.jpg" width="100%" height="100%">
+                        </div>
+                        <div class="card-info">
+                            <p>Racha-Lechkhumi is a region in western Georgia, celebrated for its pristine nature, mountainous landscapes, mineral springs, and unique cultural heritage.</p>
+                            <div>
+                                <a href="./contact.html"><button>Contact</button></a>
+                                <a href="https://en.wikipedia.org/wiki/Racha-Lechkhumi_and_Kvemo_Svaneti" target="_blank"><button>More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-posts">
+                        <div class="card-image">
+                            <img src="./Posts/Samargelo-Gruziya.jpeg" width="100%" height="100%">
+                        </div>
+                        <div class="card-info">
+                            <p>Samegrelo, in western Georgia, is known for lush greenery, subtropical climate, rich culture, delicious cuisine, and warm hospitality.</p>
+                            <div>
+                                <a href="./contact.html"><button>Contact</button></a>
+                                <a href="https://en.wikipedia.org/wiki/Samegrelo-Zemo_Svaneti" target="_blank"><button>More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-cards">
+                    <div class="card-posts">
+                        <div class="card-image">
+                            <img src="./Posts/guria.jpg" width="100%" height="100%">
+                        </div>
+                        <div class="card-info">
+                            <p>Guria, a region in western Georgia, is prized for its picturesque coastline, sandy beaches, charming villages, vibrant folklore, and traditional music.</p>
+                            <div>
+                                <a href="./contact.html"><button>Contact</button></a>
+                                <a href="https://en.wikipedia.org/wiki/Guria" target="_blank"><button>More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-posts">
+                        <div class="card-image">
+                            <img src="./Posts/imereti-gelati-monastery-2.jpg" width="100%" height="100%">
+                        </div>
+                        <div class="card-info">
+                            <p>Imereti, central Georgia, offers historic landmarks, diverse landscapes, and friendly locals, including the UNESCO-listed Gelati Monastery.</p>
+                            <div>
+                                <a href="./contact.html"><button>Contact</button></a>
+                                <a href="https://en.wikipedia.org/wiki/Imereti" target="_blank"><button>More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="left-cards">
+                    <div class="card-posts">
+                        <div class="card-image">
+                            <img src="./Posts/1651046382_66-vsegda-pomnim-com-p-gruziya-batumi-more-foto-70.jpg" width="100%" height="100%">
+                        </div>
+                        <div class="card-info">
+                            <p>Adjara, in southwest Georgia, offers a captivating blend of picturesque coastlines, lush landscapes, vibrant Batumi city, rich culture, and delectable cuisine.</p>
+                            <div>
+                                <a href="./contact.html"><button>Contact</button></a>
+                                <a href="https://en.wikipedia.org/wiki/Adjara" target="_blank"><button>More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-posts">
+                        <div class="card-image">
+                            <img src="./Posts/shida kartli.jpg" width="100%" height="100%">
+                        </div>
+                        <div class="card-info">
+                            <p>Shida Kartli, located in central Georgia, is home to the impressive Goris Tsikhe fortress, stunning landscapes, rich history, and hospitable people.</p>
+                            <div>
+                                <a href="./contact.html"><button>Contact</button></a>
+                                <a href="https://en.wikipedia.org/wiki/Shida_Kartli" target="_blank"><button>More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-cards">
+                    <div class="card-posts">
+                        <div class="card-image">
+                            <img src="./Posts/rabati.jpg" width="100%" height="100%">
+                        </div>
+                        <div class="card-info">
+                            <p>Samtskhe-Javakheti, in southern Georgia, allures with its scenic beauty, historic landmarks like Rabati Castle, diverse culture, and warm community.</p>
+                            <div>
+                                <a href="./contact.html"><button>Contact</button></a>
+                                <a href="https://en.wikipedia.org/wiki/Samtskhe%E2%80%93Javakheti" target="_blank"><button>More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-posts">
+                        <div class="card-image">
+                            <img src="./Posts/javri.jpg" width="100%" height="100%">
+                        </div>
+                        <div class="card-info">
+                            <p>Mtskheta-Mtianeti, in eastern Georgia, boasts the iconic Jvari Monastery, offering panoramic views, historical significance, and a spiritual ambiance.</p>
+                            <div>
+                                <a href="./contact.html"><button>Contact</button></a>
+                                <a href="https://en.wikipedia.org/wiki/Mtskheta-Mtianeti" target="_blank"><button>More</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="after-tours">
+        <p id="header-after-tours"><i class="fa-sharp fa-solid fa-quote-left"></i></p>
+        <p id="small-quoute">"Traveling is a transformative journey, expanding horizons, forging connections, and creating cherished memories. It unveils the world's beauty, cultivates adaptability, and ignites a passion for exploration, enriching our lives immeasurably."</p>
+    </div>
+   
+    <div class="logo-for-lulini">
+        <a href="#"><img src="./images/FullLogo_Transparent.png"></a>
+    </div>
+    <footer>
+        <div class="final-div">
+            <p id="foot-head">Lulini Web Development</p>
+            <p>
+                Lulini Development Group: Crafting captivating websites with cutting-edge technology and stunning design, tailored to your business needs. Trust us for your online presence.</p>
+            <div class="socials-foot">
+                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Flulinitransport%3Figshid%3DMzRlODBiNWFlZA%253D%253D%26fbclid%3DIwAR0QQH77RiBIumvQwvmMnI3yMbxMMX9lkOgMFLouI5oAPJo55BU6YdvidIo&h=AT1u44w_drsSbMaMQ3AgCT6Sy5kI1VYsn-V5tBzoYpCbbqtyCj8Rz78pFc9Ei7cakloNXtWjyv137R_k-m3-iappidyfkvy8DVcH3_fdt42iuNpdS-QCzygYYBcn493vY5Lf8Q" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/Luka.Tskhvaradze/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=995555277335" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="bottom-foot">
+            <p>Copyright @2023 <a href="#">LuliniDevelopment</a></p>
+            <hr>
+            <p id="creator">Created By <a href="https://www.facebook.com/profile.php?id=100088419544165" target="_blank">Luka Tskhvaradze</a></p>
+            <hr>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Book.html">Book</a></li>
+                <li><a href="./Service.html">Services</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./albums.html">Albums</a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
