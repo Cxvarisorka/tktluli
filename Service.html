@@ -26,6 +26,27 @@
           ::-webkit-scrollbar-thumb:hover {
             background: #f1f1f1;
           }
+          ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color: white;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+           color: white;
+           opacity:  1;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+           color: white;
+           opacity:  1;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+           color: white;
+        }
+        ::-ms-input-placeholder { /* Microsoft Edge */
+           color: white;
+        }
+        
+        ::placeholder { /* Most modern browsers support this now. */
+           color: white;
+        }
         *{
             margin: 0;
             padding: 0;
@@ -36,6 +57,7 @@
             top: 0;
             position:sticky;
             margin-top: 0px;
+            z-index: 999;
             background-color: #ffffff;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
@@ -212,7 +234,7 @@
             }
             .es.active{
                 left: 0;
-                transition: 0.25s;
+                transition: 0.5s;
             }
             .bod.active{
                 overflow: hidden;
@@ -230,7 +252,8 @@
                 padding-top: 50px;
                 gap: 50px;
                 transition: all 0.5s;
-                left: -100%;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                left: -110%;
             }
             nav div ul li a{
                 color: white;
@@ -1470,7 +1493,7 @@
 
                 <input type="text" id="name" name="name" placeholder="YOUR NAME" required>
                 <input type="email" id="mail" name="email" placeholder="EMAIL ADDRESS" required>
-                <input type="number" id="num" name="number" placeholder="(+995) XXX XXX XXX" required>
+                <input type="tel" id="num" name="number" placeholder="(+995) XXX XXX XXX" required>
                 <textarea placeholder="MESSAGE" name="message" required></textarea>
                 <div id="btn-bdiv">
                     <button id="btn-book" type="submit">Book Now</button>
@@ -1503,7 +1526,7 @@
                 <li><a href="./Book.html">Book</a></li>
                 <li><a href="./Service.html">Services</a></li>
                 <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./Trips.html">Albums</a></li>
+                <li><a href="./Tours.html">Tours</a></li>
             </ul>
         </div>
     </footer>

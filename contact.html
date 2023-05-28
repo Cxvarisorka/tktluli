@@ -26,6 +26,27 @@
           ::-webkit-scrollbar-thumb:hover {
             background: #f1f1f1;
           }
+        ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color: white;
+        }
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+           color: white;
+           opacity:  1;
+        }
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */
+           color: white;
+           opacity:  1;
+        }
+        :-ms-input-placeholder { /* Internet Explorer 10-11 */
+           color: white;
+        }
+        ::-ms-input-placeholder { /* Microsoft Edge */
+           color: white;
+        }
+        
+        ::placeholder { /* Most modern browsers support this now. */
+           color: white;
+        }
         *{
             margin: 0;
             padding: 0;
@@ -36,8 +57,10 @@
             top: 0;
             position: sticky;
             width: 100%;
+            margin-top: 0;
             background-color: #ffffff;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            z-index: 999;
         }
         body{
             transition: 0.25s;
@@ -223,16 +246,6 @@
             .bod.active{
                 overflow: hidden;
             }
-            .right-shadow{
-                position: fixed;
-                width: 100%;
-                height: 100vh;
-                top: 130px;
-                right: -100%;
-                background-color: #000000;
-                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                display: block;
-            }
             nav div ul{
                 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                 position: fixed;
@@ -247,7 +260,7 @@
                 padding-top: 50px;
                 gap: 50px;
                 transition: all 0.5s;
-                left: -100%;
+                left: -110%;
             }
             nav div ul li a{
                 color: white;
@@ -928,7 +941,7 @@
                 <li><a href="./Book.html">Book</a></li>
                 <li><a href="./Service.html">Services</a></li>
                 <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./albums.html">Albums</a></li>
+                <li><a href="./Tours.html">Tours</a></li>
             </ul>
         </div>
     </footer>

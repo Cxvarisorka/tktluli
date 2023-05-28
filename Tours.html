@@ -12,20 +12,21 @@
             width: 10px;
           }
           
-          /* Track */
-          ::-webkit-scrollbar-track {
+        /* Track */
+        ::-webkit-scrollbar-track {
             background:#3b541d;
-          }
+        }
           
-          /* Handle */
-          ::-webkit-scrollbar-thumb {
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
             background: white;
-          }
+        }
           
-          /* Handle on hover */
-          ::-webkit-scrollbar-thumb:hover {
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
             background: #f1f1f1;
-          }
+        }
+        
         *{
             margin: 0;
             padding: 0;
@@ -33,8 +34,10 @@
             font-family: 'Hanken Grotesk';
         }
         nav{
+            z-index: 999;
             top: 0;
             position:sticky;
+            margin-top: 0;
             background-color: #ffffff;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
@@ -211,12 +214,13 @@
             }
             .es.active{
                 left: 0;
-                transition: 0.25s;
+                transition: 0.5s;
             }
             .bod.active{
                 overflow: hidden;
             }
             nav div ul{
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                 position: fixed;
                 width: 100%;
                 height: 100vh;
@@ -229,7 +233,7 @@
                 padding-top: 50px;
                 gap: 50px;
                 transition: all 0.5s;
-                left: -100%;
+                left: -110%;
             }
             nav div ul li a{
                 color: white;
@@ -925,7 +929,7 @@
                             <img src="./Posts/1651046382_66-vsegda-pomnim-com-p-gruziya-batumi-more-foto-70.jpg" width="100%" height="100%">
                         </div>
                         <div class="card-info">
-                            <p>Adjara, in southwest Georgia, offers a captivating blend of picturesque coastlines, lush landscapes, vibrant Batumi city, rich culture, and delectable cuisine.</p>
+                            <p>Adjara, in southwest Georgia, offers a captivating blend of picturesque coastlines, vibrant Batumi city, rich culture, and delectable cuisine.</p>
                             <div>
                                 <a href="./contact.html"><button>Contact</button></a>
                                 <a href="https://en.wikipedia.org/wiki/Adjara" target="_blank"><button>More</button></a>
@@ -1004,7 +1008,7 @@
                 <li><a href="./Book.html">Book</a></li>
                 <li><a href="./Service.html">Services</a></li>
                 <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./albums.html">Albums</a></li>
+                <li><a href="./Tours.html">Tours</a></li>
             </ul>
         </div>
     </footer>
