@@ -7,6 +7,8 @@
     <script src="https://kit.fontawesome.com/ddac99b4fd.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./favicon/favicon-32x32.png">
     <link rel="stylesheet" href="./styles/index.css">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8085256854397048" crossorigin="anonymous"></script>
     <title>Lulini</title>
     <script>
         "use strict";
@@ -116,6 +118,7 @@
                     <li><a href="./Service.html">Services</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                     <li><a href="./Tours.html">Tours</a></li>
+                    <li><a href="./cars.html">Cars</a></li>
                 </ul>
                 <a id="bu-a"><input type="button" id="check"></a>
                 <label for="check" class="checkbtn">
@@ -309,7 +312,7 @@
                         <p id="top-main-about-header">What <span>We Do</span></p>
                     </div>
                     <div class="bottom-main-about">
-                        <a href="./book.html">
+                        <a href="./cars.html">
                             <div class="services-post">
                                 <div class="post-image">
                                     <img src="./Images/Car Rental Companies Improve Treatment of Consumers in the EU _ GTP Headlines.jpg" id="post-image-photo">
@@ -386,5 +389,30 @@
             </ul>
         </div>
     </footer>
+    <button onclick="topFunction()" onclick="scrollFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+    <script>
+        // Get the button:
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        $(document).ready(function(){
+            
+            //Click event to scroll to top
+            $('#myBtn').click(function(){
+                $('html, body').animate({scrollTop : 0},800);
+                return false;
+            });
+            
+        });
+    </script>
 </body>
 </html>
