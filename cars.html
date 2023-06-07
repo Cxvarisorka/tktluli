@@ -1,4 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@300;500;700&family=Roboto:wght@400;500;700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ddac99b4fd.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./favicon/favicon-32x32.png">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@300;500;700&family=Roboto:wght@400;500;700&display=swap');
         ::-webkit-scrollbar {
             width: 10px;
         }
@@ -35,16 +45,6 @@
         ::placeholder { /* Most modern browsers support this now. */
             color: white;
         }
-        input[type="date"]::-webkit-inner-spin-button,
-        input[type="date"]::-webkit-calendar-picker-indicator {
-            display: none;
-            -webkit-appearance: none;
-        }
-        input[type="time"]::-webkit-inner-spin-button,
-        input[type="time"]::-webkit-calendar-picker-indicator {
-            display: none;
-            -webkit-appearance: none;
-        }
         *{
             margin: 0;
             padding: 0;
@@ -58,6 +58,8 @@
             z-index: 999;
             background-color: #ffffff;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding-left: 10px;
+            padding-right: 10px;
         }
         #logo{
             text-decoration: none;
@@ -262,7 +264,7 @@
                 font-size: 15px;
             }
         }
-        @media screen and (max-width: 1100px) {
+        @media screen and (max-width: 1200px) {
             #main-nav{
                 width: 100%;
                 padding: 0 15px;
@@ -288,6 +290,7 @@
                 border-style: solid;
                 border-color: #8ECE41;
             }
+            
           }
         .checkbtn{
             font-size: 30px;
@@ -301,7 +304,7 @@
         #bu-a{
             display: none;
         }
-        @media screen and (max-width: 900px){
+        @media screen and (max-width: 930px){
             nav div ul li a{
                 font-size: 15px;
             }
@@ -381,7 +384,7 @@
                 display: none;
             }
         }
-        @media (max-width: 600px){
+        @media (max-width: 640px){
             .checkbtn{
                 display: block;
             }
@@ -449,434 +452,212 @@
                 font-size: 15px;
             }
         }
+        @media screen and (max-width:660px){
+            #logo{
+                font-size: 30px;
+            }
+        }
         @media screen and (max-width: 280px){
             #logo{
                 font-size: 30px;
             }
         }
-        
-        .left-trait,.right-trait{
-            display: flex;
-            width: 50%;
-            align-items: center;
-            justify-content: space-around;
-        }
-        .company-overwiev{
-            margin-top: 50px;
-            margin-bottom: 50px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .main-short-about{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 50px;
-            width: 100%;
-            height: 100%;
-        }
-        .left-company{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            width: 50%;
-            gap: 20px;
-            text-align: center;
-        }
-        #company-header{
-            font-size: 50px;
-            font-weight: 700;
-        }
-        #company-header span{
-            color: #8ECE41;
-        }
-        #about-us-short{
-            padding: 10px;
-            font-size: 20px;
-            border: none;
-            background-color: #8ECE41;
-            color: white;
-            cursor: pointer;
-            transition: 0.25s;
-        }
-        #about-us-short a{
-            text-decoration: none;
-            color: white;
-        }
-        #about-us-short:hover{
-            scale: 1.1;
-        }
-        #info-company{
-            font-size: 20px;
-        }
-        @media (max-width: 1200px){
-            .left-company{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                width: 50%;
-                gap: 15px;
-                text-align: center;
-            }
-            #company-header{
-                font-size: 40px;
-                font-weight: 700;
-            }
-            #info-company{
-                font-size: 18px;
-            }
-            #about-us-short{
-                padding: 10px;
-                font-size: 18px;
-                border: none;
-                background-color: #8ECE41;
-                color: white;
-                cursor: pointer;
-                transition: 0.25s;
-            }
-        }
-        @media (max-width: 1000px){
-            .left-company{
-                width: 100%;
-                gap: 25px;
-            }
-        }
-        @media (max-width: 712px){
-            #company-header{
-                font-size: 30px;
-                font-weight: 700;
-            }
-            #info-company{
-                font-size: 16px;
-            }
-        }
-        @media (max-width: 280px){
-            #company-header{
-                font-size: 25px;
-                font-weight: 700;
-            }
-            #info-company{
-                font-size: 14px;
-            }
-        }
-        @media (max-width: 450px){
-            .icon-trait{
-                font-size: 40px;
-            }
-            .top-info-traits{
-                font-size: 20px;
-            }
-            .bottom-info-traits{
-                font-size: 14px;
-            }
-        }
-        #top-main-about-header{
-            font-weight: 700;
-            font-size: 70px;
-            color: white;
-        }
-        #top-main-about-header span{
-            color: #8ECE41;
-        }
-        .top-main-about{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-        }
-        .about-services{
-            background-color: black;
-            width: 100%;
-            height: 800px;
-            background-image: url("/Images/bun.jpg");
-            background-repeat: no-repeat;
-            background-position: 0;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 50px;
-        }
-        .services-post{
-            border-radius: 5px;
-            background-color: rgba(0, 0, 0, 0.6);
-            display: flex;
-            flex-direction: column;
-            box-shadow: rgba(0, 0, 0, 2) 0px 5px 15px;
-            gap: 10px;
-            width: 450px;
-            height: 400px;
-        }
-        .post-image{
+        .after-nav{
             width: 100%;
             height: 300px;
+            background-image: url("/Images/fotor_2023-5-31_19_33_7.jpg");
             background-size: cover;
-            background-repeat: no-repeat;
-            background-position: 0;
-            overflow: hidden;
-            border-top-left-radius: 5px;
-            border-top-right-radius: 5px;
-        }
-        .service-post-info{
+            background-position: center;
             display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-left: 10px;
-        }
-        #info-post-1{
-            font-size: 30px;
-            color: white;
-            font-weight: 700;
-        }
-        #info-post-2{
-            font-size: 20px;
-            color: rgb(218, 218, 218);
-        }
-        #post-image-photo{
-            width: 100%;
-            height: 100%;
-            transition: all 0.25s;
-        }
-        #post-image-photo:hover{
-            scale: 1.1;
-        }
-        .main-about-services{
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-        }
-        .center-service-about{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 30px;
-            width: 85%;
-        }
-        .bottom-main-about{
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-        }
-        .isaa{
-            width: 230px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .isaa hr{
-            border:#8ECE41 2px solid;
-            width: 50px;
-        }
-        .isaa p{
-            font-size: 20px;
-            color: white;
-            font-weight: bold;
-        }
-        @media (max-width: 1650px){
-            #top-main-about-header{
-                font-size: 50px;
-            }
-            .isaa p{
-                font-size: 17px;
-            }
-            .services-post{
-                width: 400px;
-                height: 350px;
-            }
-            #info-post-1{
-                font-size: 25px;
-            }
-            #info-post-2{
-                font-size: 17px;
-            }
-        }
-        @media (max-width: 1430px){
-            #top-main-about-header{
-                font-size: 40px;
-            }
-            .isaa p{
-                font-size: 16px;
-            }
-            .services-post{
-                width: 350px;
-                height: 300px;
-            }
-            #info-post-1{
-                font-size: 20px;
-            }
-            #info-post-2{
-                font-size: 16px;
-            }
-        }
-        @media (max-width: 1250px){
-            #top-main-about-header{
-                font-size: 30px;
-            }
-            .isaa p{
-                font-size: 15px;
-            }
-            .services-post{
-                width: 320px;
-                height: 270px;
-            }
-            #info-post-1{
-                font-size: 17px;
-            }
-            #info-post-2{
-                font-size: 15px;
-            }
-        }
-        @media (max-width: 1250px){
-            .main-about-services{
-                margin-bottom: 50px;
-            }
-            .top-main-about{
-                margin-top: 20px;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                
-            }
-
-            .bottom-main-about{
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                gap: 30px;
-            }
-            .about-services{
-                height: 100%;
-                justify-content: center;
-                align-items: center;
-            }
-            #top-main-about-header{
-                font-size: 30px;
-            }
-            .center-service-about{
-                justify-content: center;
-                align-items: center;
-            }
-            .main-about-services{
-                justify-content: center;
-                align-items: center;
-            }
-            .isaa p{
-                font-size: 20px;
-            }
-            .services-post{
-                width: 450px;
-                height: 350px;
-            }
-            #info-post-1{
-                font-size: 25px;
-            }
-            #info-post-2{
-                font-size: 20px;
-            }
-            .service-post-info{
-                margin-left: 0;
-            }
-        }
-        @media (max-width: 740px){
-            #top-main-about-header{
-                font-size: 30px;
-            }
-            .isaa p{
-                font-size: 15px;
-            }
-            .services-post{
-                width: 320px;
-                height: 270px;
-            }
-            #info-post-1{
-                font-size: 17px;
-            }
-            #info-post-2{
-                font-size: 15px;
-            }
-        }
-        @media (max-width: 350px){
-            #top-main-about-header{
-                font-size: 25px;
-            }
-            .isaa p{
-                font-size: 15px;
-            }
-            .services-post{
-                width: 270px;
-                height: 220px;
-            }
-            #info-post-1{
-                font-size: 15px;
-            }
-            #info-post-2{
-                font-size: 15px;
-            }
-        }
-        .quoute{
-            width: 100%;
-            height: 400px;
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .quoute-main{
-            width: 1000px;
-            display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            gap: 30px;
-        }
-        .quoute-main i{
-            font-size: 70px;
+            color:white;
             transition: 0.25s;
         }
-        .quoute-main i:hover{
-            color: #8ECE41;
+        #head-after{
+            font-weight: 800; 
+            font-size: 50px;
         }
-        .quoute-name{
-            
-            font-size: 30px;
+        @media screen and (max-width: 350px){
+            #head-after{
+                font-size: 40px;
+            }
+        }
+        .cars{
+            width: 100%;
+            height: 100%;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-cars{
+            width: 900px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            padding: 20px;
+        }
+        .posts{
+            width: 100%;
+            height: 250px;
+            background-color: #ffffff;
+            display: flex;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            border-bottom: 2px solid rgb(181, 181, 181);
+            border-top: 2px solid rgb(181, 181, 181);
+        }
+        .car-image{
+            width: 300px;
+            height: 100%;
+            background-image: url("Imagecars/new_car1.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .car-prices{
+            width: 300px;
+            height: 100%;
+            background-color: rgb(227, 227, 227);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-left: 20px;
+        }
+        .car-prices a{
+            font-size: 20px;
+            font-weight: 700;
+            color: #3b541d;
+        }
+        .prices{
+            display: flex;
+            flex-direction: column;
+            font-size: 20px;
+            gap: 10px;
+        }
+        .prices p span{
+            color: #84c238;
             font-weight: 700;
         }
-        .ceo-type{
-            font-size: 20px;
+        .car-options{
+            width: 300px;
+            height: 100%;
+            display: flex;
         }
-        .info-quoute{
-            font-size: 25px;
+        .left{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+            justify-content: space-around;
+            padding-left: 10px;
         }
-        @media (max-width: 740px){
-            .fa-quote-left{
-                font-size: 50px;
+        .right{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+            justify-content: space-around;
+        }
+        .opt{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .right .opt{
+            justify-content: end;
+        }
+        .opt p{
+            font-size: 16px;
+            font-weight: 700;
+        }
+        #dep{
+            color: #646464;
+            font-size: 18px;
+        }
+        @media screen and (max-width:910px){
+            .main-cars{
+                justify-content: center;
+                align-items: center;
             }
-            .quoute-name{
-                font-size: 25px;
+            .posts{
+                flex-direction: column;
+                height: 800px;
+                width: 600px;
             }
-            .info-quoute{
+            .car-image{
+                width: 600px;
+            }
+            .car-prices{
+                width: 600px;
+                flex-direction: row;
+                align-items: center;
+            }
+            .prices{
                 font-size: 20px;
+                gap: 20px;
+            }
+            .car-options{
+                width: 600px;
+            }
+            .left{
+                padding-left: 0;
             }
         }
-        @media (max-width: 400px){
-            .quoute-main{
-                width: 500px;
+        @media screen and (max-width:610px){
+            .posts{
+                flex-direction: column;
+                height: 800px;
+                width: 400px;
             }
-            .fa-quote-left{
-                font-size: 30px;
+            .car-image{
+                width: 400px;
             }
-            .quoute-name{
-                font-size: 15px;
+            .car-prices{
+                width: 400px;
+                flex-direction: column;
             }
-            .info-quoute{
-                font-size: 15px;
+            .prices{
+                font-size: 18px;
+                gap: 20px;
+            }
+            .car-options{
+                width: 400px;
+            }
+            .main-cars{
+                width: 275px;
             }
         }
-        .bottom-main-about a{
-            text-decoration: none;
+        @media screen and (max-width:410px){
+            .posts{
+                flex-direction: column;
+                height: 800px;
+                width: 280px;
+            }
+            .car-image{
+                width: 280px;
+                background-position: center;
+            }
+            .car-prices{
+                width: 280px;
+                flex-direction: column;
+            }
+            .prices{
+                font-size: 18px;
+                gap: 20px;
+            }
+            .car-options{
+                width: 280px;
+            }
+        }
+        .post2 .car-image{
+            background-image: url("Imagecars/minivan1.jpg");
         }
         footer{
             display: flex;
@@ -1033,7 +814,7 @@
             }
             .bottom-foot ul li a{
                 color: white;
-                font-size: 17px;
+                font-size: 15px;
                 transition: all 0.25s;
             }
             .bottom-foot ul li{
@@ -1052,296 +833,8 @@
                 font-size: 17px;
             }
         }
-        .logo-for-lulini{
-            width: 100%;
-            height: 250px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 50px;
-        }
-        .logo-for-lulini img{
-            width: 300px;
-            height: 250px;
-        }
-        @media screen and (max-width: 350px){
-            .bottom-foot ul{
-                gap: 5px;
-            }
-            .bottom-foot ul li a{
-                color: white;
-                font-size: 15px;
-                transition: all 0.25s;
-            }
-        }
-        @media screen and (max-width: 280px){
-            .logo-for-lulini img{
-                width: 250px;
-                height: 200px;
-            }
-        }
-        @media screen and (max-width: 330px){
-            #logo{
-                font-size: 30px;
-            }   
-        }
-        @media screen and (max-width: 600px){
-            #main-nav{
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-        }
-        .sb-title {
-            position: relative;
-            top: -12px;
-            font-weight: 500;
-            font-size: 25px;
-            color: white;
-        }
-    
-        .sb-title-icon {
-            font-size: 25px;
-            position: relative;
-            top: -5px;
-        }
-    
-        .card-container {
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,3.00);
-            display: flex;
-            height: 650px;
-            width:1000px;
-            background-color: rgba(0, 0, 0, 0.6);
-        }
-    
-        .panel {
-            background-color: transparent;
-            width: 500px;
-            height: 100%;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-        }
-    
-        .half-input-container {
-            display: flex;
-            justify-content: space-between;
-        }
-        .half-input-container input{
-            width: 45%;
-        }
-    
-        .half-input {
-            max-width: 120px;
-        }
-    
-        .map {
-            width: 500px;
-        }
-    
-        .card-container h2 {
-            margin: 0;
-            font-family: Roboto, sans-serif;
-          }
-        .card-container input {
-            border-radius: 3px;
-            border: 0;
-            background-color: transparent;
-            border-bottom: 1px white solid;
-            padding: 15px;
-            color: white;
-            font-size: 18px;
-            font-style: normal;
-            transition: 0.25s;
-          }
-    
-        .card-container input:focus{
-            outline: none;
-            background-color: white;
-            color: black;
-        }
-        .card-container input:focus::placeholder{
-            color: white;
-        }
-    
-        .button-cta {
-            border: none;
-            padding: 10px;
-            background:#1e3e69;
-            color: white;
-            font-size: 20px;
-            cursor: pointer;
-            transition: 0.25s;
-        }
-        .button-cta:hover{
-            background-color: #122a49;
-        }
-        .form1{
-            height: 100%;
-            width: 100%;
-            justify-content: space-between;
-            display: flex;
-            flex-direction: column;
-            
-        }
-        .buttons-for-book{
-            width: 100%;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .buttons-for-book button{
-            width: 30%;
-            height: 100%;
-            font-size: 18px;
-            border: none;
-            color: white;
-            background-color: #1e3e69;
-            cursor: pointer;
-            transition: 0.25s;
-        }
-        .buttons-for-book button:hover{
-            background-color: #122a49;
-        }
-        @media screen and (max-width: 365px){
-            .buttons-for-book button{
-                font-size: 15px;
-            }
-        }
-        @media screen and (max-width: 315px){
-            .buttons-for-book button{
-                font-size: 14px;
-            }
-        }
-        #transfer-form{
-            display: flex;
-        }
-        #taxi-form{
-            display: none;
-        }
-        #rental-form{
-            display: none;
-        }
-        .panel{
-            gap: 10px;
-        }
-        #options{
-            padding: 15px;
-            font-size: 18px;
-            color: white;
-            background-color: transparent;
-            border: none;
-            border-bottom: 1px white solid;
-        }
-        #options:focus{
-            outline: none;
-        }
-        #options option{
-            color: black;
-        }
-        @media screen and (max-width:1020px){
-            .card-container{
-                width: 700px;
-            }
-            .panel input{
-                font-size: 15px;
-            }
-            .panel button{
-                font-size: 15px;
-            }
-            #options{
-                font-size: 15px;
-            }
-        }
-        @media screen and (max-width:720px){
-            .card-container{
-                width: 500px;
-            }
-            .panel input{
-                font-size: 15px;
-            }
-            .panel button{
-                font-size: 15px;
-            }
-            .map{
-                display: none;
-            }
-        }
-        @media screen and (max-width:530px){
-            .card-container{
-                width: 400px;
-            }
-            .panel input{
-                font-size: 15px;
-            }
-            .panel button{
-                font-size: 15px;
-            }
-            
-        }
-        @media screen and (max-width:410px){
-            .sb-title{
-                font-size: 20px;
-            }
-            .panel{
-                width: 100%;
-            }
-            .card-container{
-                width: 350px;
-            }
-            .panel input{
-                font-size: 14px;
-            }
-            .panel button{
-                font-size: 14px;
-            }
-            #options{
-                font-size: 14px;
-            }
-        }
-        @media screen and (max-width:360px){
-            .sb-title{
-                font-size: 20px;
-            }
-            .panel{
-                width: 100%;
-            }
-            .card-container{
-                width: 300px;
-            }
-            .panel input{
-                font-size: 14px;
-            }
-            .panel button{
-                font-size: 14px;
-            }
-        }
-        @media screen and (max-width:310px){
-            .sb-title{
-                font-size: 20px;
-            }
-            .panel{
-                width: 100%;
-            }
-            .card-container{
-                width: 270px;
-            }
-            .panel input{
-                font-size: 14px;
-            }
-            .panel button{
-                font-size: 14px;
-            }
-        }
-        @media screen and (max-width:640px){
-            #logo{
-                font-size: 30px;
-            }
-        }
-        @keyframes first{
-            from{margin-top: 100px; opacity: 0;}
-            to{margin-top: 0; opacity: 1;}
+        .post3 .car-image{
+            background-image: url("Imagecars/337466252_2299848650215109_1658276281779219901_n.jpg");
         }
         #myBtn{
             background-color: #8ECE41;
@@ -1358,11 +851,277 @@
             height: 60px;
             border: none;
             position: fixed;
-            bottom: 1%;
-            right: 1%;
+            bottom: 3%;
+            right: 2%;
             transition: 0.25s;
             display: none;
         }
         #myBtn:hover{
             background-color: #4c6c25;
         }
+    </style>
+    <title>Lulini</title>
+</head>
+<body class="bod">
+    <nav>
+        <div id="main-nav">
+            <div id="top-nav">
+                <div class="top-nav-left">
+                    <div class="tele">
+                        <i class="fa-solid fa-square-phone"></i>
+                        <p>(+995) 555 277 335</p>
+                    </div>
+                    <div class="tele">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>Lulini2023@gmail.com</p>
+                    </div>
+                    <div class="tele">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <p>Georgia,Tbilisi</p>
+                    </div>
+                </div>
+                <div class="top-nav-right">
+                    <a href="https://www.facebook.com/Luka.Tskhvaradze?mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-square-facebook right-i"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=995555277335" target="_blank"><i class="fa-brands fa-whatsapp right-i"></i></a>
+                    <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Flulinitransport%3Figshid%3DMzRlODBiNWFlZA%253D%253D%26fbclid%3DIwAR0rnaL-4t7TkIVUZfLleJ67dYzzSp-wA6A-niXczm7RrOnKiejSKvG7pQ0&h=AT1HYp7jP2QihzdosNkyfXa1C7_yghZLMmNI5Had7b_DH7euySuWkDcF2yqs9mB6PCAa0jCV7c9fqWmltgGxsWV21_YNNClv5eSQMetkd6AebSQiH-6fsFoXiH-6qyOZA-GOxw" target="_blank"><i class="fa-brands fa-square-instagram right-i"></i></a>
+                </div>
+            </div>
+            <div id="hk"></div>
+            <div id="botom-nav">
+                <a id="logo" href="index.html">Lulini Transport</a>
+                <ul class="es">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="./Book.html">Book</a></li>
+                    <li><a href="./Service.html">Services</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./Tours.html">Tours</a></li>
+                    <li><a href="./cars.html">Cars</a></li>
+                </ul>
+                <a id="bu-a"><input type="button" id="check"></a>
+                <label for="check" class="checkbtn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <script>
+                    but = document.querySelector("#check");
+                    but.onclick = function(){
+                        nav = document.querySelector(".es");
+                        nav.classList.toggle("active");
+                        bd = document.querySelector(".bod");
+                        bd.classList.toggle("active");
+                    }
+                </script>
+            </div>
+
+        </div>
+    </nav>
+    <div class="after-nav">
+        <p id="head-after">Our car fleet</p>
+        <p>ALL THESE CARS ARE READY TO BE RENTED</p>
+    </div>
+    <div class="cars">
+        <div class="main-cars">
+            <div class="posts post1">
+                <a class="car-image" href="./cars/Hondaelectric.html"></a>
+                <div class="car-prices">
+                    <a href="/cars/Hondaelectric.html">Electric Honda</a>
+                    <div class="prices">
+                        <p>4-7 days <span>250</span> GEL/day</p>
+                        <p>8-16 days <span>200</span> GEL/day</p>
+                        <p>17-30 days <span>180</span> GEL/day</p>
+                    </div>
+                    <p id="dep">Deposit: 500 GEL</p>
+                </div>
+                <div class="car-options">
+                    <div class="left">
+                        <div class="opt">
+                            <img src="./icons/01_engine.png">
+                            <p>Full Electric</p>
+                        </div>
+                        <div class="opt">
+                            <img src="./icons/03_petrol.png">
+                            <p>Electric</p>
+                        </div>
+                        <div class="opt">
+                            <img src="./icons/04_transmission.png">
+                            <p>Automatic</p>
+                        </div>
+                        <div class="opt">
+                            <img src="./icons/02_fuel.png">
+                            <p>0.0/100km</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="opt">
+                            <p>Conditioning</p>
+                            <img src="./icons/05_AC.png">
+                        </div>
+                        <div class="opt">
+                            <p>4 Passengers</p>
+                            <img src="./icons/06_passengers.png">
+                        </div>
+                        <div class="opt">
+                            <p>3-5 Bags</p>
+                            <img src="./icons/08_bagage.png">
+                        </div>
+                        <div class="opt">
+                            <p>Drive: Front</p>
+                            <img src="./icons/07_FWD.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="posts post2">
+                <a class="car-image" href="#"></a>
+                <div class="car-prices">
+                    <a href="#">Mercedes-Benz Metris</a>
+                    <div class="prices">
+                        <p>4-7 days <span>300</span> GEL/day</p>
+                        <p>8-16 days <span>250</span> GEL/day</p>
+                        <p>17-30 days <span>200</span> GEL/day</p>
+                    </div>
+                    <p id="dep">Deposit: 500 GEL</p>
+                </div>
+                <div class="car-options">
+                    <div class="left">
+                        <div class="opt">
+                            <img src="./icons/01_engine.png">
+                            <p>2.0</p>
+                        </div>
+                        <div class="opt">
+                            <img src="./icons/03_petrol.png">
+                            <p>Petrol</p>
+                        </div>
+                        <div class="opt">
+                            <img src="./icons/04_transmission.png">
+                            <p>Automatic</p>
+                        </div>
+                        <div class="opt">
+                            <img src="./icons/02_fuel.png">
+                            <p>10l/100km</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="opt">
+                            <p>Conditioning</p>
+                            <img src="./icons/05_AC.png">
+                        </div>
+                        <div class="opt">
+                            <p>8 Passengers</p>
+                            <img src="./icons/06_passengers.png">
+                        </div>
+                        <div class="opt">
+                            <p>8 Bags</p>
+                            <img src="./icons/08_bagage.png">
+                        </div>
+                        <div class="opt">
+                            <p>Drive: Back</p>
+                            <img src="./icons/07_RWD.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="posts post3">
+                <a class="car-image" href="#"></a>
+                <div class="car-prices">
+                    <a href="#">Mercedes-Benz Metris</a>
+                    <div class="prices">
+                        <p>4-7 days <span>250</span> GEL/day</p>
+                        <p>8-16 days <span>200</span> GEL/day</p>
+                        <p>17-30 days <span>180</span> GEL/day</p>
+                    </div>
+                    <p id="dep">Deposit: 500 GEL</p>
+                </div>
+                <div class="car-options">
+                    <div class="left">
+                        <div class="opt">
+                            <img src="./icons/01_engine.png">
+                            <p>2.0</p>
+                        </div>
+                        <div class="opt">
+                            <img src="./icons/03_petrol.png">
+                            <p>Petrol</p>
+                        </div>
+                        <div class="opt">
+                            <img src="./icons/04_transmission.png">
+                            <p>Automatic</p>
+                        </div>
+                        <div class="opt">
+                            <img src="./icons/02_fuel.png">
+                            <p>10l/100km</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="opt">
+                            <p>Conditioning</p>
+                            <img src="./icons/05_AC.png">
+                        </div>
+                        <div class="opt">
+                            <p>8 Passengers</p>
+                            <img src="./icons/06_passengers.png">
+                        </div>
+                        <div class="opt">
+                            <p>8 Bags</p>
+                            <img src="./icons/08_bagage.png">
+                        </div>
+                        <div class="opt">
+                            <p>Drive: Back</p>
+                            <img src="./icons/07_RWD.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="final-div">
+            <p id="foot-head">Lulini Web Development</p>
+            <p>
+                Lulini Development Group: Crafting captivating websites with cutting-edge technology and stunning design, tailored to your business needs. Trust us for your online presence.</p>
+            <div class="socials-foot">
+                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Finstagram.com%2Flulinitransport%3Figshid%3DMzRlODBiNWFlZA%253D%253D%26fbclid%3DIwAR0QQH77RiBIumvQwvmMnI3yMbxMMX9lkOgMFLouI5oAPJo55BU6YdvidIo&h=AT1u44w_drsSbMaMQ3AgCT6Sy5kI1VYsn-V5tBzoYpCbbqtyCj8Rz78pFc9Ei7cakloNXtWjyv137R_k-m3-iappidyfkvy8DVcH3_fdt42iuNpdS-QCzygYYBcn493vY5Lf8Q" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/Luka.Tskhvaradze/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=995555277335" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.youtube.com/@LuliniTransport" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="bottom-foot">
+            <p>Copyright @2023 <a href="#">LuliniDevelopment</a></p>
+            <hr>
+            <p id="creator">Created By <a href="https://www.facebook.com/profile.php?id=100088419544165" target="_blank">Luka Tskhvaradze</a></p>
+            <hr>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Book.html">Book</a></li>
+                <li><a href="./Service.html">Services</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li><a href="./Tours.html">Tours</a></li>
+            </ul>
+        </div>
+    </footer>
+    <button onclick="topFunction()" onclick="scrollFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+    <script>
+        // Get the button:
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        $(document).ready(function(){
+            
+            //Click event to scroll to top
+            $('#myBtn').click(function(){
+                $('html, body').animate({scrollTop : 0},800);
+                return false;
+            });
+            
+        });
+    </script>
+</body>
+</html>

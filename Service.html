@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/ddac99b4fd.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./favicon/favicon-32x32.png">
     <link rel="stylesheet" href="./styles/service.css">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <title>Service</title>
 </head>
 <body class="bod">
@@ -42,6 +43,7 @@
                     <li><a href="./Service.html">Services</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                     <li><a href="./Tours.html">Tours</a></li>
+                    <li><a href="./cars.html">Cars</a></li>
                 </ul>
                 <a id="kuch"><input type="button" id="check"></a>
                 <label for="check" class="checkbtn">
@@ -167,11 +169,11 @@
     </div>
     <script>
         var btn_div1 = document.getElementById("btna");
-        var btn_div2 = document.getElementById("btnb")
-        var btn_div3 = document.getElementById("btnc")
+        var btn_div2 = document.getElementById("btnb");
+        var btn_div3 = document.getElementById("btnc");
         var diva = document.getElementById("div1-s");
         var divb = document.getElementById("div2-s");
-        var divc = document.getElementById("div3-s")
+        var divc = document.getElementById("div3-s");
         btn_div1.addEventListener('click' , ()=>{
             diva.style.display='flex';
             divb.style.display='none';
@@ -283,5 +285,30 @@
             </ul>
         </div>
     </footer>
+    <button onclick="topFunction()" onclick="scrollFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+    <script>
+        // Get the button:
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        $(document).ready(function(){
+            
+            //Click event to scroll to top
+            $('#myBtn').click(function(){
+                $('html, body').animate({scrollTop : 0},800);
+                return false;
+            });
+            
+        });
+    </script>
 </body>
 </html>

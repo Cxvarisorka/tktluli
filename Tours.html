@@ -7,7 +7,185 @@
     <script src="https://kit.fontawesome.com/ddac99b4fd.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./favicon/favicon-32x32.png">
     <link rel="stylesheet" href="./styles/tours.css">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <title>Lulini</title>
+    <style>
+        .traits-comp{
+            width: 100%;
+            height: 1350px;
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+            align-items: center;
+        }
+        .trait{
+            width: 1200px;
+            height: 400px;
+            display: flex;
+            border-radius: 18px;
+            gap: 40px;
+            overflow: hidden;
+            justify-content: space-between;
+        }
+        .info-trait{
+            width: 50%;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+        }
+        .imgs{
+            width: 50%;
+            height: 100%;
+            background-size: cover;
+        }
+        .info-trait p{
+            font-size: 20px;
+        }
+        .info-trait p span{
+            color: #8ECE41;
+        }
+        #header-info-trait{
+            font-size: 40px;
+            font-weight: 700;
+        }
+        .tr2 .imgs{
+            order: -1;
+        }
+        @media (max-width: 1210px){
+            .trait{
+                width: 1000px;
+                font-size: 17px;
+            }
+            .imgs{
+                background-position: center;
+            }
+            .info-trait p{
+                font-size: 17px;
+            }
+            #header-info-trait{
+                font-size: 35px;
+            }
+        }
+        @media (max-width: 1010px){
+            .traits-comp{
+                height: 100%;
+            }
+            .trait{
+                width: 700px;
+                flex-direction: column;
+                height: 700px;
+                gap: 0px;
+            }
+            .imgs{
+                background-position: center;
+                width: 100%;
+            }
+            .info-trait{
+                width: 100%;
+            }
+            .info-trait p{
+                font-size: 20px;
+            }
+            #header-info-trait{
+                font-size: 40px;
+            }
+            .tr2 .imgs{
+                order: 0;
+            }
+        }
+        @media (max-width: 710px){
+            .traits-comp{
+                height: 100%;
+            }
+            .trait{
+                width: 500px;
+                flex-direction: column;
+                height: 700px;
+                gap: 0px;
+            }
+            .imgs{
+                background-position: center;
+                width: 100%;
+            }
+            .info-trait{
+                width: 100%;
+            }
+            .info-trait p{
+                font-size: 16px;
+            }
+            #header-info-trait{
+                font-size: 30px;
+            }
+            .tr2 .imgs{
+                order: 0;
+            }
+        }
+        @media (max-width: 510px){
+            .traits-comp{
+                height: 100%;
+            }
+            .trait{
+                width: 300px;
+                flex-direction: column;
+                height: 500px;
+                gap: 20px;
+            }
+            .imgs{
+                background-position: center;
+                width: 100%;
+            }
+            .info-trait{
+                width: 100%;
+            }
+            .info-trait p{
+                font-size: 14px;
+            }
+            #header-info-trait{
+                font-size: 30px;
+            }
+            .tr2 .imgs{
+                order: 0;
+            }
+            .logo-for-lulini img{
+                width: 250px;
+                height: 200px;
+            }
+            @media (max-width: 310px){
+                .traits-comp{
+                    height: 100%;
+                }
+                .trait{
+                    width: 270px;
+                    flex-direction: column;
+                    height: 500px;
+                    gap: 20px;
+                }
+                .imgs{
+                    background-position: center;
+                    width: 100%;
+                }
+                .info-trait{
+                    width: 100%;
+                }
+                .info-trait p{
+                    font-size: 14px;
+                }
+                #header-info-trait{
+                    font-size: 30px;
+                }
+                .tr2 .imgs{
+                    order: 0;
+                }
+                .logo-for-lulini img{
+                    width: 250px;
+                    height: 200px;
+                }
+            }
+        }
+    </style>
 </head>
 <body class="bod">
     <nav id="nv">
@@ -42,6 +220,7 @@
                     <li><a href="./Service.html">Services</a></li>
                     <li><a href="./contact.html">Contact</a></li>
                     <li><a href="./Tours.html">Tours</a></li>
+                    <li><a href="./cars.html">Cars</a></li>
                 </ul>
                 <a id="kuch"><input type="button" id="check"></a>
                 <label for="check" class="checkbtn">
@@ -89,7 +268,7 @@
                     </div>
                     <div class="card-posts">
                         <div class="card-image">
-                            <img src="./Posts/2644587396.jpg" width="100%" height="100%">
+                            <img src="./Posts/kanioni.jpg" width="100%" height="100%">
                         </div>
                         <div class="card-info">
                             <p>Samegrelo, in western Georgia, is known for lush greenery, subtropical climate, rich culture, delicious cuisine, and warm hospitality.</p>
@@ -187,7 +366,29 @@
         <p id="header-after-tours"><i class="fa-sharp fa-solid fa-quote-left"></i></p>
         <p id="small-quoute">"Traveling is a transformative journey, expanding horizons, forging connections, and creating cherished memories. It unveils the world's beauty, cultivates adaptability, and ignites a passion for exploration, enriching our lives immeasurably."</p>
     </div>
-   
+    <div class="traits-comp">
+        <div class="trait tr1">
+            <div class="info-trait">
+                <p id="header-info-trait">Maintained <span>Cars</span></p>
+                <p>At Lulini Transport Service, your safety is our top priority. We understand that when you entrust us with your transportation needs, you expect a secure and reliable journey. That's why we go the extra mile to ensure the safety of our cars and passengers. Our fleet consists of meticulously maintained vehicles that undergo regular inspections and maintenance checks. From routine servicing to thorough safety inspections, we leave no stone unturned in guaranteeing the optimal performance and reliability of our cars.</p>
+            </div>
+            <div class="imgs" style="background-image: url(./Images/mininvams.jpg);"></div>
+        </div>
+        <div class="trait tr2">
+            <div class="info-trait">
+                <p id="header-info-trait"><span>Expert</span> Guides</p>
+                <p>Experience the difference with Lulini Transport's knowledgeable guides. Our expert team adds a new dimension to your journey, sharing captivating insights and in-depth knowledge of local history, culture, and attractions. With their passion and expertise, our guides create an immersive and educational experience, making your trip truly unforgettable. Discover hidden gems, hear fascinating stories, and gain a deeper understanding of your destination. Choose Lulini Transport Service and embark on a journey led by our knowledgeable guides for an enriching adventure like no other.</p>
+            </div>
+            <div class="imgs" style="background-image: url(./Images/guider.jpg);"></div>
+        </div>
+        <div class="trait tr3">
+            <div class="info-trait">
+                <p id="header-info-trait"> Best <span>Experience</span></p>
+                <p>Experience excellence with Lulini Transport. From the moment you step into our vehicles, you'll be greeted by our professional and friendly team, dedicated to providing an exceptional journey. Our well-maintained cars and knowledgeable guides ensure a comfortable and enriching travel experience. We prioritize your safety, punctuality, and overall satisfaction, going above and beyond to exceed your expectations. Discover the difference of traveling with Lulini Transport and indulge in a memorable experience filled with reliability, professionalism, and unparalleled service. Sit back, relax, and enjoy the journey of a lifetime with us.</p>
+            </div>
+            <div class="imgs" style="background-image: url(./images/Travellers-Movie-Wallpapers.jpg);"></div>
+        </div>
+    </div>
     <div class="logo-for-lulini">
         <a href="https://www.facebook.com/Luka.Tskhvaradze" target="_blank"><img src="./images/FullLogo_Transparent.png"></a>
     </div>
@@ -217,5 +418,30 @@
             </ul>
         </div>
     </footer>
+    <button onclick="topFunction()" onclick="scrollFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+    <script>
+        // Get the button:
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        $(document).ready(function(){
+            
+            //Click event to scroll to top
+            $('#myBtn').click(function(){
+                $('html, body').animate({scrollTop : 0},800);
+                return false;
+            });
+            
+        });
+    </script>
 </body>
 </html>
