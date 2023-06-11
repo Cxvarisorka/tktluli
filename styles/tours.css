@@ -816,7 +816,7 @@
             width: 60px;
             height: 60px;
             border: none;
-            position: fixed;
+            position:fixed;
             bottom: 3%;
             right: 2%;
             transition: 0.25s;

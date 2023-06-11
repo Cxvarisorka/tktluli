@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/ddac99b4fd.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./favicon/favicon-32x32.png">
+    <link rel="stylesheet" href="./styles/contact.css">
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <title>Lulini</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@300;500;700&family=Roboto:wght@400;500;700&display=swap');
         ::-webkit-scrollbar {
@@ -484,181 +486,6 @@
                 font-size: 40px;
             }
         }
-        .cars{
-            width: 100%;
-            height: 100%;
-            margin-top: 50px;
-            margin-bottom: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .main-cars{
-            width: 900px;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-
-            padding: 20px;
-        }
-        .posts{
-            width: 100%;
-            height: 250px;
-            background-color: #ffffff;
-            display: flex;
-            padding-bottom: 10px;
-            padding-top: 10px;
-            border-bottom: 2px solid rgb(181, 181, 181);
-            border-top: 2px solid rgb(181, 181, 181);
-        }
-        .car-image{
-            width: 300px;
-            height: 100%;
-            background-image: url("Imagecars/new_car1.jpg");
-            background-size: cover;
-            background-position: center;
-        }
-        .car-prices{
-            width: 300px;
-            height: 100%;
-            background-color: rgb(227, 227, 227);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            padding-left: 20px;
-        }
-        .car-prices a{
-            font-size: 20px;
-            font-weight: 700;
-            color: #3b541d;
-        }
-        .prices{
-            display: flex;
-            flex-direction: column;
-            font-size: 20px;
-            gap: 10px;
-        }
-        .prices p span{
-            color: #84c238;
-            font-weight: 700;
-        }
-        .car-options{
-            width: 300px;
-            height: 100%;
-            display: flex;
-        }
-        .left{
-            display: flex;
-            flex-direction: column;
-            width: 50%;
-            height: 100%;
-            justify-content: space-around;
-            padding-left: 10px;
-        }
-        .right{
-            display: flex;
-            flex-direction: column;
-            width: 50%;
-            height: 100%;
-            justify-content: space-around;
-        }
-        .opt{
-            width: 100%;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        .right .opt{
-            justify-content: end;
-        }
-        .opt p{
-            font-size: 16px;
-            font-weight: 700;
-        }
-        #dep{
-            color: #646464;
-            font-size: 18px;
-        }
-        @media screen and (max-width:910px){
-            .main-cars{
-                justify-content: center;
-                align-items: center;
-            }
-            .posts{
-                flex-direction: column;
-                height: 800px;
-                width: 600px;
-            }
-            .car-image{
-                width: 600px;
-            }
-            .car-prices{
-                width: 600px;
-                flex-direction: row;
-                align-items: center;
-            }
-            .prices{
-                font-size: 20px;
-                gap: 20px;
-            }
-            .car-options{
-                width: 600px;
-            }
-            .left{
-                padding-left: 0;
-            }
-        }
-        @media screen and (max-width:610px){
-            .posts{
-                flex-direction: column;
-                height: 800px;
-                width: 400px;
-            }
-            .car-image{
-                width: 400px;
-            }
-            .car-prices{
-                width: 400px;
-                flex-direction: column;
-            }
-            .prices{
-                font-size: 18px;
-                gap: 20px;
-            }
-            .car-options{
-                width: 400px;
-            }
-            .main-cars{
-                width: 275px;
-            }
-        }
-        @media screen and (max-width:410px){
-            .posts{
-                flex-direction: column;
-                height: 800px;
-                width: 280px;
-            }
-            .car-image{
-                width: 280px;
-                background-position: center;
-            }
-            .car-prices{
-                width: 280px;
-                flex-direction: column;
-            }
-            .prices{
-                font-size: 18px;
-                gap: 20px;
-            }
-            .car-options{
-                width: 280px;
-            }
-        }
-        .post2 .car-image{
-            background-image: url("Imagecars/minivan1.jpg");
-        }
         footer{
             display: flex;
             flex-direction: column;
@@ -833,9 +660,319 @@
                 font-size: 17px;
             }
         }
-        .post3 .car-image{
-            background-image: url("Imagecars/white5.jpg");
+        .info-about-car{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-info-car{
+            padding-top: 50px;
+            padding-bottom: 50px;
+            gap: 30px;
+            width: 1000px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .top-car{
+            width: 100%;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            background-color: #f1f1f1;
+        }
+        .car-images{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: #324b13;
+        }
+        #main-image{
+            width: 100%;
+            height: 300px;
+            background-image: url("/Imagecars/white5.jpg");
             background-position: right;
+            background-size: cover;
+        }
+        .button-car{
+            height: 100px;
+            display: flex;
+            overflow: hidden;
+
+        }
+        .button-car button{
+            height: 100%;
+            width: 100%;
+            transition: 0.15s;
+            border: none;
+            cursor: pointer;
+        }
+        .button-car button:hover{
+            scale: 1.1;
+
+        }
+        #button1{
+            background-image: url("/Imagecars/white5.jpg");
+            background-position: right;
+            background-size: cover;
+        }
+        #button2{
+            background-image: url("/Imagecars/white1.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        #button3{
+            background-image: url("/Imagecars/white7.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        #button4{
+            background-image: url("/Imagecars/white6.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+        .right-car-prices{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: antiquewhite;
+        }
+        .top-car-prices{
+            width: 100%;
+            height: 50%;
+            background-color: rgb(227, 227, 227);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 20px;
+            padding-left: 40px;
+        }
+        .prices{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .prices span{
+            font-weight: 700;
+            color: #8ECE41;
+        }
+        #dep{
+            color: #646464;
+        }
+        .bottom-car-prices{
+            width: 100%;
+            height: 50%;
+            background-color: #8ECE41;
+            color: #324b13;
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            padding-left: 40px;
+        }
+        .bottom-car-prices ul{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .button-car div{
+            display: flex;
+            width: 100%;
+
+        }
+        @media screen and (max-width:1010px){
+            .main-info-car{
+                width: 700px;
+            }
+        }
+        @media screen and (max-width:710px){
+            .main-info-car{
+                width: 500px;
+            }
+            .top-car{
+                flex-direction: column;
+                height: 1000px;
+            }
+            .car-images{
+                width: 100%;
+                height: 50%;
+            }
+            .right-car-prices{
+                width: 100%;
+            }
+        }
+        @media screen and (max-width:510px){
+            .main-info-car{
+                width: 400px;
+            }
+            .top-car{
+                flex-direction: column;
+            }
+            .car-images{
+                width: 100%;
+                height: 100%;
+            }
+            .right-car-prices{
+                width: 100%;
+            }
+            .button-car{
+                flex-direction: column;
+                height: 200px;
+            }
+            .button-car div{
+                flex-direction: row;
+                height: 100%;
+                width: 100%;
+            }
+            .top-car-prices{
+                padding: 0;
+                text-align: center;
+            }
+            .middle-car{
+                text-align: center;
+
+            }
+        }
+        @media screen and (max-width:410px){
+            .main-info-car{
+                width: 300px;
+            }
+            .top-car{
+                flex-direction: column;
+            }
+            .car-images{
+                width: 100%;
+                height: 100%;
+            }
+            .right-car-prices{
+                width: 100%;
+            }
+            .button-car{
+                flex-direction: column;
+                height: 200px;
+            }
+            .button-car div{
+                flex-direction: row;
+                height: 100%;
+                width: 100%;
+            }
+            .top-car-prices{
+                padding: 0;
+                text-align: center;
+            }
+            .middle-car{
+                text-align: center;
+
+            }
+        }
+        @media screen and (max-width:310px){
+            .main-info-car{
+                width: 270px;
+            }
+            .top-car{
+                flex-direction: column;
+            }
+            .car-images{
+                width: 100%;
+                height: 100%;
+            }
+            .right-car-prices{
+                width: 100%;
+            }
+            .button-car{
+                flex-direction: column;
+                height: 200px;
+            }
+            .button-car div{
+                flex-direction: row;
+                height: 100%;
+                width: 100%;
+            }
+            .top-car-prices{
+                padding: 0;
+                text-align: center;
+            }
+            .middle-car{
+                text-align: center;
+
+            }
+        }
+        .middle-car{
+            font-size: 17px;
+        }
+        .middle-car cite{
+            font-size: 25px;
+        }
+        .bottom-car{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .trait-car{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .trait-car i{
+            font-size: 45px;
+            color: #69982f;
+            transition: 0.25s;
+        }
+        .trait-car i:hover{
+            color: #324b13;
+        }
+        .trait-car p{
+            font-size: 25px;
+        }
+        .book-car button{
+            border: none;
+            color: white;
+            background-color: #8ECE41;
+            padding: 15px 20px;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.35s;
+        }
+        .book-car button:hover{
+            transform: scale(1.1);
+            background-color: #324b13;
+        }
+        .sides-for-bottom{
+            display: flex;
+            width: 50%;
+            justify-content: space-around;
+        }
+        @media (max-width: 1010px){
+            .bottom-car{
+                flex-direction: column;
+                gap: 30px;
+                
+            }
+            .sides-for-bottom{
+                width: 100%;
+            }
+        }
+        @media (max-width: 510px){
+            .sides-for-bottom div i{
+                font-size: 35px;
+            }
+            .sides-for-bottom div p{
+                font-size: 20px;
+            }
+            .sides-for-bottom{
+                text-align: center;
+                justify-content: space-between;
+            }
         }
         #myBtn{
             background-color: #8ECE41;
@@ -861,7 +998,6 @@
             background-color: #4c6c25;
         }
     </style>
-    <title>Lulini</title>
 </head>
 <body class="bod">
     <nav>
@@ -889,14 +1025,14 @@
             </div>
             <div id="hk"></div>
             <div id="botom-nav">
-                <a id="logo" href="index.html">Lulini Transport</a>
+                <a id="logo" href="/index.html">Lulini Transport</a>
                 <ul class="es">
                     <li><a href="#">Home</a></li>
-                    <li><a href="./Book.html">Book</a></li>
-                    <li><a href="./Service.html">Services</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="./Tours.html">Tours</a></li>
-                    <li><a href="./cars.html">Cars</a></li>
+                    <li><a href="/Book.html">Book</a></li>
+                    <li><a href="/Service.html">Services</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/Tours.html">Tours</a></li>
+                    <li><a href="/cars.html">Cars</a></li>
                 </ul>
                 <a id="bu-a"><input type="button" id="check"></a>
                 <label for="check" class="checkbtn">
@@ -919,160 +1055,105 @@
         <p id="head-after">Our car fleet</p>
         <p>ALL THESE CARS ARE READY TO BE RENTED</p>
     </div>
-    <div class="cars">
-        <div class="main-cars">
-            <div class="posts post1">
-                <a class="car-image" href="./cars/Hondaelectric.html"></a>
-                <div class="car-prices">
-                    <a href="/cars/Hondaelectric.html">Electric Honda</a>
-                    <div class="prices">
-                        <p>4-7 days <span>250</span> GEL/day</p>
-                        <p>8-16 days <span>200</span> GEL/day</p>
-                        <p>17-30 days <span>180</span> GEL/day</p>
+    <div class="info-about-car">
+        <div class="main-info-car">
+            <div class="top-car">
+                <div class="car-images">
+                    <div id="main-image"></div>
+                    <div class="button-car">
+                        <div>
+                            <button id="button1"></button>
+                            <button id="button2"></button>
+                        </div>
+                        <div>
+                            <button id="button3"></button>
+                            <button id="button4"></button>
+                        </div>
                     </div>
-                    <p id="dep">Deposit: 500 GEL</p>
                 </div>
-                <div class="car-options">
-                    <div class="left">
-                        <div class="opt">
-                            <img src="./icons/01_engine.png">
-                            <p>Full Electric</p>
-                        </div>
-                        <div class="opt">
-                            <img src="./icons/03_petrol.png">
-                            <p>Electric</p>
-                        </div>
-                        <div class="opt">
-                            <img src="./icons/04_transmission.png">
-                            <p>Automatic</p>
-                        </div>
-                        <div class="opt">
-                            <img src="./icons/02_fuel.png">
-                            <p>0.0/100km</p>
+                <div class="right-car-prices">
+                    <div class="top-car-prices">
+                        <div class="prices">
+                            <div>
+                                <p>4-7 days <span>250</span> GEL/day</p>
+                                <p>8-16 days <span>200</span> GEL/day</p>
+                                <p>17-30 days <span>180</span> GEL/day</p>
+                            </div>
+                            <p id="dep">Deposit: 500 GEL</p>
                         </div>
                     </div>
-                    <div class="right">
-                        <div class="opt">
-                            <p>Conditioning</p>
-                            <img src="./icons/05_AC.png">
-                        </div>
-                        <div class="opt">
-                            <p>4 Passengers</p>
-                            <img src="./icons/06_passengers.png">
-                        </div>
-                        <div class="opt">
-                            <p>3-5 Bags</p>
-                            <img src="./icons/08_bagage.png">
-                        </div>
-                        <div class="opt">
-                            <p>Drive: Front</p>
-                            <img src="./icons/07_FWD.png">
-                        </div>
+                    <div class="bottom-car-prices">
+                        <ul style="list-style: square;">
+                            <p>PRICE INCLUDES</p>
+                            <div>
+                                <li>CDW (Collison Damage Waiver);</li>
+                                <li>TP (Third-Party Insurance);</li>
+                                <li>TPL (Third Party Liability);</li>
+                                <li>Parking in Tbilisi;</li>
+                                <li>Unlimited mileage.</li>
+                            </div>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="posts post2">
-                <a class="car-image" href="#"></a>
-                <div class="car-prices">
-                    <a href="#">Mercedes-Benz Metris</a>
-                    <div class="prices">
-                        <p>4-7 days <span>300</span> GEL/day</p>
-                        <p>8-16 days <span>250</span> GEL/day</p>
-                        <p>17-30 days <span>200</span> GEL/day</p>
-                    </div>
-                    <p id="dep">Deposit: 500 GEL</p>
-                </div>
-                <div class="car-options">
-                    <div class="left">
-                        <div class="opt">
-                            <img src="./icons/01_engine.png">
-                            <p>2.0</p>
-                        </div>
-                        <div class="opt">
-                            <img src="./icons/03_petrol.png">
-                            <p>Petrol</p>
-                        </div>
-                        <div class="opt">
-                            <img src="./icons/04_transmission.png">
-                            <p>Automatic</p>
-                        </div>
-                        <div class="opt">
-                            <img src="./icons/02_fuel.png">
-                            <p>10l/100km</p>
-                        </div>
-                    </div>
-                    <div class="right">
-                        <div class="opt">
-                            <p>Conditioning</p>
-                            <img src="./icons/05_AC.png">
-                        </div>
-                        <div class="opt">
-                            <p>8 Passengers</p>
-                            <img src="./icons/06_passengers.png">
-                        </div>
-                        <div class="opt">
-                            <p>8 Bags</p>
-                            <img src="./icons/08_bagage.png">
-                        </div>
-                        <div class="opt">
-                            <p>Drive: Back</p>
-                            <img src="./icons/07_RWD.png">
-                        </div>
-                    </div>
-                </div>
+            <div class="middle-car">
+                <cite>"Mercedes-Benz Metris 2015"</cite>
+                <br>
+                <br>
+                <p>The Mercedes-Benz Metris Minivan, introduced in 2015, is a noteworthy vehicle that blends the renowned craftsmanship of the Mercedes-Benz brand with the versatility of a minivan. Despite being a few years old, the 2015 Metris Minivan continues to impress with its timeless design and exceptional performance.</p>
+                <br>
+                <p>The interior of the Metris Minivan is thoughtfully designed, offering a spacious cabin that can comfortably seat up to eight passengers. The seating configuration can be adjusted to accommodate various passenger and cargo needs, making it a practical choice for families and businesses alike.</p>
+                <br>
+                <p>Powered by a reliable and efficient engine, the 2015 Metris Minivan delivers a smooth and responsive driving experience. It boasts a host of advanced safety features, including stability control, traction control, and multiple airbags, ensuring the utmost safety of its occupants.</p>
+                <br>
+                <p>While newer models may offer additional technological advancements, the 2015 Metris Minivan still holds its own in terms of style, performance, and reliability. It remains a solid choice for those seeking a dependable and capable minivan with the prestigious Mercedes-Benz badge.</p>
             </div>
-            <div class="posts post3">
-                <a class="car-image" href="./cars/Mercedesbenzmetris.html"></a>
-                <div class="car-prices">
-                    <a href="#">Mercedes-Benz Metris</a>
-                    <div class="prices">
-                        <p>4-7 days <span>250</span> GEL/day</p>
-                        <p>8-16 days <span>200</span> GEL/day</p>
-                        <p>17-30 days <span>180</span> GEL/day</p>
+            <div class="book-car">
+                <a href="/Book.html"><button><span>Book Car</span></button></a>
+            </div>
+            <div class="bottom-car">
+                <div class="sides-for-bottom">
+                    <div class="trait-car">
+                        <i class="fa-solid fa-car"></i>
+                        <p>Comfortable Cars</p>
                     </div>
-                    <p id="dep">Deposit: 500 GEL</p>
+                    <div class="trait-car">
+                        <i class="fa-solid fa-shield"></i>
+                        <p>Maintained Cars</p>
+                    </div>
                 </div>
-                <div class="car-options">
-                    <div class="left">
-                        <div class="opt">
-                            <img src="./icons/01_engine.png">
-                            <p>2.0</p>
-                        </div>
-                        <div class="opt">
-                            <img src="./icons/03_petrol.png">
-                            <p>Petrol</p>
-                        </div>
-                        <div class="opt">
-                            <img src="./icons/04_transmission.png">
-                            <p>Automatic</p>
-                        </div>
-                        <div class="opt">
-                            <img src="./icons/02_fuel.png">
-                            <p>10l/100km</p>
-                        </div>
+                <div class="sides-for-bottom">
+                    <div class="trait-car">
+                        <i class="fa-solid fa-leaf"></i>
+                        <p>Eco Friendly Cars</p>
                     </div>
-                    <div class="right">
-                        <div class="opt">
-                            <p>Conditioning</p>
-                            <img src="./icons/05_AC.png">
-                        </div>
-                        <div class="opt">
-                            <p>8 Passengers</p>
-                            <img src="./icons/06_passengers.png">
-                        </div>
-                        <div class="opt">
-                            <p>8 Bags</p>
-                            <img src="./icons/08_bagage.png">
-                        </div>
-                        <div class="opt">
-                            <p>Drive: Back</p>
-                            <img src="./icons/07_RWD.png">
-                        </div>
+                    <div class="trait-car">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <p>Insured vehicles</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        var btn_div1 = document.getElementById("button1");
+        var btn_div2 = document.getElementById("button2");
+        var btn_div3 = document.getElementById("button3");
+        var btn_div4 = document.getElementById("button4");
+        var diva = document.getElementById("main-image");
+        btn_div1.addEventListener('click' , ()=>{
+            diva.style.backgroundImage='url(/Imagecars/white5.jpg)';
+        });
+        btn_div2.addEventListener('click' , ()=>{
+            diva.style.backgroundImage='url(/Imagecars/white1.jpg)';
+        });
+        btn_div3.addEventListener('click' , ()=>{
+            diva.style.backgroundImage='url(/Imagecars/white7.jpg)';
+        });
+        btn_div4.addEventListener('click' , ()=>{
+            diva.style.backgroundImage='url(/Imagecars/white6.jpg)';
+        });
+    </script>
     <footer>
         <div class="final-div">
             <p id="foot-head">Lulini Web Development</p>
@@ -1091,11 +1172,11 @@
             <p id="creator">Created By <a href="https://www.facebook.com/profile.php?id=100088419544165" target="_blank">Luka Tskhvaradze</a></p>
             <hr>
             <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./Book.html">Book</a></li>
-                <li><a href="./Service.html">Services</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./Tours.html">Tours</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/Book.html">Book</a></li>
+                <li><a href="/Service.html">Services</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/Tours.html">Tours</a></li>
             </ul>
         </div>
     </footer>
