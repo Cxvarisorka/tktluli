@@ -86,6 +86,14 @@
     </script>
 </head>
 <body class="bod">
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+        <script>
+            $(window).on("load",function(){
+                $(".loader-wrapper").fadeOut("slow");
+            });
+        </script>
+    </div>
     <nav id="nv">
         <div id="main-nav">
             <div id="top-nav">
