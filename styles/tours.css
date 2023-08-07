@@ -242,7 +242,7 @@
             width: 100%;
             height: 350px;
             background-color: #8ECE41;
-            background-image: url("/images/wallpaperflare.com_wallpaper\ \(6\).jpg");
+            background-image: url("../Images/wallpaperflare.com_wallpaper\ \(6\).jpg");
             background-repeat: no-repeat;
             background-size: cover;
             display: flex;
@@ -252,7 +252,7 @@
             transition: 0.25s;
         }
         .after-nav:hover{
-            background-image: url("/Images/fotor_2023-5-23_20_10_7.jpg");
+            background-image: url("../Images/fotor_2023-5-23_20_10_7.jpg");
         }
         .after-nav div{
             color: white;
@@ -547,7 +547,7 @@
             display: flex;
             flex-direction: column;
             background-color: #2f496e;
-            background-image: url("/images/wallpaperflare.com_wallpaper.jpg");
+            background-image: url("../Images/wallpaperflare.com_wallpaper.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             justify-content: center;
@@ -558,7 +558,7 @@
             color: white;
         }
         .after-tours:hover{
-            background-image: url("/Images/wallpaperflare.com_wallpaper\ \(2\).jpg");
+            background-image: url("../Images/wallpaperflare.com_wallpaper\ \(2\).jpg");
             
         }
         #header-after-tours{
